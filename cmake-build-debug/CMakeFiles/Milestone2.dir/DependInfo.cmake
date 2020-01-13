@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/idan/CLionProjects/Milestone2/main.cpp" "/home/idan/CLionProjects/Milestone2/cmake-build-debug/CMakeFiles/Milestone2.dir/main.cpp.o"
+  "/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o"
+  "/home/idan/CLionProjects/MIlestone-2/main.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/main.cpp.o"
+  "/home/idan/CLionProjects/MIlestone-2/server/MySerialServer.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o"
+  "/home/idan/CLionProjects/MIlestone-2/solver/Solver.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/solver/Solver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

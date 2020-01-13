@@ -48,10 +48,10 @@ RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/idan/CLionProjects/Milestone2
+CMAKE_SOURCE_DIR = /home/idan/CLionProjects/MIlestone-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/idan/CLionProjects/Milestone2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/idan/CLionProjects/MIlestone-2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/idan/CLionProjects/Milestone2/cmake-build-debug/CMakeFiles /home/idan/CLionProjects/Milestone2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles /home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/idan/CLionProjects/Milestone2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ Milestone2/fast:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/build
 .PHONY : Milestone2/fast
 
+client/MyTestClientHandler.o: client/MyTestClientHandler.cpp.o
+
+.PHONY : client/MyTestClientHandler.o
+
+# target to build an object file
+client/MyTestClientHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o
+.PHONY : client/MyTestClientHandler.cpp.o
+
+client/MyTestClientHandler.i: client/MyTestClientHandler.cpp.i
+
+.PHONY : client/MyTestClientHandler.i
+
+# target to preprocess a source file
+client/MyTestClientHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.i
+.PHONY : client/MyTestClientHandler.cpp.i
+
+client/MyTestClientHandler.s: client/MyTestClientHandler.cpp.s
+
+.PHONY : client/MyTestClientHandler.s
+
+# target to generate assembly for a file
+client/MyTestClientHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.s
+.PHONY : client/MyTestClientHandler.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +177,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+server/MySerialServer.o: server/MySerialServer.cpp.o
+
+.PHONY : server/MySerialServer.o
+
+# target to build an object file
+server/MySerialServer.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o
+.PHONY : server/MySerialServer.cpp.o
+
+server/MySerialServer.i: server/MySerialServer.cpp.i
+
+.PHONY : server/MySerialServer.i
+
+# target to preprocess a source file
+server/MySerialServer.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.i
+.PHONY : server/MySerialServer.cpp.i
+
+server/MySerialServer.s: server/MySerialServer.cpp.s
+
+.PHONY : server/MySerialServer.s
+
+# target to generate assembly for a file
+server/MySerialServer.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.s
+.PHONY : server/MySerialServer.cpp.s
+
+solver/Solver.o: solver/Solver.cpp.o
+
+.PHONY : solver/Solver.o
+
+# target to build an object file
+solver/Solver.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/Solver.cpp.o
+.PHONY : solver/Solver.cpp.o
+
+solver/Solver.i: solver/Solver.cpp.i
+
+.PHONY : solver/Solver.i
+
+# target to preprocess a source file
+solver/Solver.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/Solver.cpp.i
+.PHONY : solver/Solver.cpp.i
+
+solver/Solver.s: solver/Solver.cpp.s
+
+.PHONY : solver/Solver.s
+
+# target to generate assembly for a file
+solver/Solver.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/Solver.cpp.s
+.PHONY : solver/Solver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Milestone2"
 	@echo "... edit_cache"
+	@echo "... client/MyTestClientHandler.o"
+	@echo "... client/MyTestClientHandler.i"
+	@echo "... client/MyTestClientHandler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... server/MySerialServer.o"
+	@echo "... server/MySerialServer.i"
+	@echo "... server/MySerialServer.s"
+	@echo "... solver/Solver.o"
+	@echo "... solver/Solver.i"
+	@echo "... solver/Solver.s"
 .PHONY : help
 
 

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Milestone2.dir/main.cpp.o  -o Milestone2 
+/usr/bin/c++  -g   CMakeFiles/Milestone2.dir/main.cpp.o CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o CMakeFiles/Milestone2.dir/solver/Solver.cpp.o  -o Milestone2 
