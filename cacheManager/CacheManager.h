@@ -1,7 +1,9 @@
 #ifndef MILESTONE2_CACHEMANAGER_H
 #define MILESTONE2_CACHEMANAGER_H
-
-#include "map"
+using namespace std;
+#include <map>
+#include <string>
+#include <list>
 template <class Problem, class Solution> class CacheManager {
 public:
     virtual bool isExist(Problem p) = 0;
@@ -10,27 +12,17 @@ public:
 };
 template <class Problem, class Solution> class FileCacheManager : public CacheManager<Problem, Solution> {
 private:
+    int size = 2;
+    map<string, typename list<std::pair<string,string>>::iterator>* cache =
+            new map<string, typename list<std::pair<string,string>>::iterator>;
+    list<std::pair<string,string>>* orderedList = new list<std::pair<string,string>>();
 public:
-    FileCacheManager() {
-    }
+    //FileCacheManager<Problem,Solution>() {};
     bool isExist(Problem p);
     Solution get(Problem p);
     void insert(Problem p, Solution s);
+    string readFile(Problem p);
+    void writeFile(Problem problem, Solution solution);
 };
-
-template<class Problem, class Solution>
-void FileCacheManager<Problem, Solution>::insert(Problem p, Solution s) {
-
-}
-
-template<class Problem, class Solution>
-Solution FileCacheManager<Problem, Solution>::get(Problem p) {
-    return nullptr;
-}
-
-template<class Problem, class Solution>
-bool FileCacheManager<Problem, Solution>::isExist(Problem p) {
-    return false;
-}
 
 #endif //MILESTONE2_CACHEMANAGER_H

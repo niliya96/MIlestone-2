@@ -19,7 +19,6 @@ template<> void MyTestClientHandler<string, string>::handleClient(int socket) {
         }
         else {
             message = this->solver->solve(bufferedValues.str());
-
         }
         //send solution to client
         char* messageSend = const_cast<char *>(message.c_str());

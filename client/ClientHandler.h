@@ -21,9 +21,9 @@ private:
     Solver<Problem,Solution>* solver;
     CacheManager<Problem, Solution>* cm;
 public:
-    MyTestClientHandler() {
-        solver = new Solver<Problem, Solution>();
-        cm = CacheManager<Problem, Solution>();
+    MyTestClientHandler(Solver<string,string>* newSolver, CacheManager<string,string>* newCM) {
+        this->solver = newSolver;
+        this->cm = newCM;
     };
     void handleClient(int socket);
 };

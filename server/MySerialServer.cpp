@@ -27,19 +27,29 @@ int openServer(int port, ClientHandler* c) {
     } else {
         std::cout << "Server is now listening ..." << std::endl;
     }
-    struct timeval tv;
-    tv.tv_sec = 120;
-    setsockopt(socketFD, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv);
+    int client_socket;
+    int result;
     // accepts clients
-    while (true) {
-        socklen_t addrlen = sizeof(sockaddr_in);
-        int client_socket = accept(socketFD, (struct sockaddr *) &address,
-                                   &addrlen);
+    while (!shouldStop) {
+        fd_set rfds;
+        FD_ZERO(&rfds);
+        FD_SET(socketFD, &rfds);
+        struct timeval tv;
+        tv.tv_sec = (long)10;
+        tv.tv_usec = 0;
+        result = select(socketFD+1, &rfds, (fd_set*)0, (fd_set*)0, &tv);
+        if (result > 0) {
+            socklen_t addrlen = sizeof(sockaddr_in);
+            client_socket = accept(socketFD, (struct sockaddr *) &address, &addrlen);
+        }
+        else {
+            continue;
+        }
         if (client_socket == -1) {
-            std::cerr << "Error accepting client" << std::endl;
             return -4;
         }
-        c->handleClient(addrlen);
+        c->handleClient(client_socket);
+        close(client_socket);
     }
     close(socketFD);
     return 0;
