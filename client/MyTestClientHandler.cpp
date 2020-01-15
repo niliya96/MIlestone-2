@@ -6,7 +6,7 @@ template<> void MyTestClientHandler<string, string>::handleClient(int socket) {
         /**TODO flush*/
         int valread = read(socket, buffer, 1024);
         stringstream bufferedValues(buffer);
-        if (bufferedValues.str().compare("end") == 0) {
+        if (bufferedValues.str().compare("end\r\n") == 0) {
             break;
         }
         string message;
@@ -15,13 +15,13 @@ template<> void MyTestClientHandler<string, string>::handleClient(int socket) {
         //check if a solution has been found
         if(solutionExist) {
             message = this->cm->get(bufferedValues.str());
-            this->cm->insert(bufferedValues.str(),message);
         }
         else {
             message = this->solver->solve(bufferedValues.str());
-
+            this->cm->insert(bufferedValues.str(),message);
         }
         //send solution to client
+        message = message + "\n";
         char* messageSend = const_cast<char *>(message.c_str());
         int toSend = send(socket , messageSend , strlen(messageSend), 0);
     }

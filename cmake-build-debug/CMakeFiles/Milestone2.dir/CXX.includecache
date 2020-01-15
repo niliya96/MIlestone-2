@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/idan/CLionProjects/MIlestone-2/cacheManager/CacheManager.h
+map
+-
+string
+-
+list
+-
+
+/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
+../solver/Solver.h
+/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
+../cacheManager/CacheManager.h
+/home/idan/CLionProjects/MIlestone-2/cacheManager/CacheManager.h
+sys/socket.h
+-
+string
+-
+unistd.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+cstring
+-
+iostream
+-
+sstream
+-
+
+/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp
+ClientHandler.h
+/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
+
+/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
+string
+-
+
