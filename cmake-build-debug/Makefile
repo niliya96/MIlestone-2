@@ -204,33 +204,6 @@ server/MySerialServer.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.s
 .PHONY : server/MySerialServer.cpp.s
 
-solver/Solver.o: solver/Solver.cpp.o
-
-.PHONY : solver/Solver.o
-
-# target to build an object file
-solver/Solver.cpp.o:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/Solver.cpp.o
-.PHONY : solver/Solver.cpp.o
-
-solver/Solver.i: solver/Solver.cpp.i
-
-.PHONY : solver/Solver.i
-
-# target to preprocess a source file
-solver/Solver.cpp.i:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/Solver.cpp.i
-.PHONY : solver/Solver.cpp.i
-
-solver/Solver.s: solver/Solver.cpp.s
-
-.PHONY : solver/Solver.s
-
-# target to generate assembly for a file
-solver/Solver.cpp.s:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/Solver.cpp.s
-.PHONY : solver/Solver.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,9 +222,6 @@ help:
 	@echo "... server/MySerialServer.o"
 	@echo "... server/MySerialServer.i"
 	@echo "... server/MySerialServer.s"
-	@echo "... solver/Solver.o"
-	@echo "... solver/Solver.i"
-	@echo "... solver/Solver.s"
 .PHONY : help
 
 

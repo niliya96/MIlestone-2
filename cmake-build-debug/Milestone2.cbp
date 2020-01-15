@@ -102,9 +102,6 @@
 		<Unit filename="/home/aaa/CLionProjects/MIlestone-2/server/Server.h">
 			<Option target="Milestone2"/>
 		</Unit>
-		<Unit filename="/home/aaa/CLionProjects/MIlestone-2/solver/Solver.cpp">
-			<Option target="Milestone2"/>
-		</Unit>
 		<Unit filename="/home/aaa/CLionProjects/MIlestone-2/solver/Solver.h">
 			<Option target="Milestone2"/>
 		</Unit>
