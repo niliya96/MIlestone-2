@@ -6,7 +6,7 @@ template<> void MyTestClientHandler<string, string>::handleClient(int socket) {
         /**TODO flush*/
         int valread = read(socket, buffer, 1024);
         stringstream bufferedValues(buffer);
-        if (bufferedValues.str().compare("end") == 0) {
+        if (bufferedValues.str().compare("end\r\n") == 0) {
             break;
         }
         string message;
