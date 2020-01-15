@@ -15,12 +15,13 @@ template<> void MyTestClientHandler<string, string>::handleClient(int socket) {
         //check if a solution has been found
         if(solutionExist) {
             message = this->cm->get(bufferedValues.str());
-            this->cm->insert(bufferedValues.str(),message);
         }
         else {
             message = this->solver->solve(bufferedValues.str());
+            this->cm->insert(bufferedValues.str(),message);
         }
         //send solution to client
+        message = message + "\n";
         char* messageSend = const_cast<char *>(message.c_str());
         int toSend = send(socket , messageSend , strlen(messageSend), 0);
     }

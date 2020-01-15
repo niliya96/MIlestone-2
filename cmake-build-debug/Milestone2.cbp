@@ -108,6 +108,9 @@
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/solver/Solver.h">
 			<Option target="Milestone2"/>
 		</Unit>
+		<Unit filename="/home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp">
+			<Option target="Milestone2"/>
+		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

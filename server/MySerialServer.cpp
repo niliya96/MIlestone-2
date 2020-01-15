@@ -55,10 +55,10 @@ int openServer(int port, ClientHandler* c) {
     return 0;
 
 }
-void Server::open(int port, ClientHandler* c) {
+void MySerialServer::open(int port, ClientHandler* c) {
     thread server(openServer, port, c);
     server.join();
 }
-void Server::stop() {
+void MySerialServer::stop() {
 
 }

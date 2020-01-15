@@ -21,3 +21,6 @@ CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o: ../server/MySerialServer.
 CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o: ../server/Server.h
 CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o: ../solver/Solver.h
 
+CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o: ../solver/Solver.h
+CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o: ../solver/StringReverser.cpp
+

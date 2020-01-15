@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o"
   "/home/idan/CLionProjects/MIlestone-2/main.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/main.cpp.o"
   "/home/idan/CLionProjects/MIlestone-2/server/MySerialServer.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o"
+  "/home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

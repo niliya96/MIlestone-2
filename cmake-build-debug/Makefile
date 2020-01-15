@@ -231,6 +231,33 @@ server/MySerialServer.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.s
 .PHONY : server/MySerialServer.cpp.s
 
+solver/StringReverser.o: solver/StringReverser.cpp.o
+
+.PHONY : solver/StringReverser.o
+
+# target to build an object file
+solver/StringReverser.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o
+.PHONY : solver/StringReverser.cpp.o
+
+solver/StringReverser.i: solver/StringReverser.cpp.i
+
+.PHONY : solver/StringReverser.i
+
+# target to preprocess a source file
+solver/StringReverser.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.i
+.PHONY : solver/StringReverser.cpp.i
+
+solver/StringReverser.s: solver/StringReverser.cpp.s
+
+.PHONY : solver/StringReverser.s
+
+# target to generate assembly for a file
+solver/StringReverser.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.s
+.PHONY : solver/StringReverser.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... server/MySerialServer.o"
 	@echo "... server/MySerialServer.i"
 	@echo "... server/MySerialServer.s"
+	@echo "... solver/StringReverser.o"
+	@echo "... solver/StringReverser.i"
+	@echo "... solver/StringReverser.s"
 .PHONY : help
 
 

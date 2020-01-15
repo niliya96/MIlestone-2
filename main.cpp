@@ -11,6 +11,6 @@ int main(int argc, char* argsv[]) {
     cm->insert("yogev","vegoy");
     std::cout << cm->get("idan") << std::endl;*/
     Main* m = new Main();
-    m->main(argc, argsv);
+    m->main(argc, argsv[1]);
     return 0;
 }

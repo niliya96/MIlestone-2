@@ -12,7 +12,7 @@ public:
 };
 template <class Problem, class Solution> class FileCacheManager : public CacheManager<Problem, Solution> {
 private:
-    int size = 2;
+    int size = 5;
     map<string, typename list<std::pair<string,string>>::iterator>* cache =
             new map<string, typename list<std::pair<string,string>>::iterator>;
     list<std::pair<string,string>>* orderedList = new list<std::pair<string,string>>();

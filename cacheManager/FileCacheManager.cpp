@@ -1,6 +1,6 @@
 #include <fstream>
 #include "CacheManager.h"
-template class  FileCacheManager<string,string>;
+template class FileCacheManager<string,string>;
 
 template<class Problem, class Solution>
 void FileCacheManager<Problem, Solution>::insert(Problem p, Solution s) {
