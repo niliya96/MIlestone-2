@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Milestone2.dir/main.cpp.o CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o  -o Milestone2 
+/usr/bin/c++  -pthread -g   CMakeFiles/Milestone2.dir/main.cpp.o CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o  -o Milestone2 
