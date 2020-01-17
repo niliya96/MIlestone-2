@@ -11,11 +11,15 @@ public:
 template <class Problem, class Solution> class StringReverser : public Solver<Problem, Solution> {
     Solution solve(Problem p);
 };
-template <class Problem, class Solution> class SolverAdapter : public Solver<Problem, Solution> {
+template<class T, class Problem, class Solution> class SolverAdapter : public Solver<Problem, Solution> {
 private:
-    Searcher<Problem, Solution> s = new Searcher<Problem, Solution>();
+    Searcher<T,Solution>* s;
 public:
-    SolverAdapter();
-    Solution solve(Problem p);
+    SolverAdapter(Searcher<T,Solution>* newS) {
+        this-> s = newS;
+    };
+    Solution solve(Problem p) {
+        return s->search(p);
+    }
 };
 #endif //MILESTONE2_SOLVER_H

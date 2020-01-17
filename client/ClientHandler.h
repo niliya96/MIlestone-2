@@ -10,6 +10,7 @@
 #include <cstring>
 #include <iostream>
 #include <sstream>
+#include <list>
 
 class ClientHandler {
 public:
@@ -22,6 +23,19 @@ private:
     CacheManager<Problem, Solution>* cm;
 public:
     MyTestClientHandler(Solver<string,string>* newSolver, CacheManager<string,string>* newCM) {
+        this->solver = newSolver;
+        this->cm = newCM;
+    };
+    void handleClient(int socket);
+};
+
+template <class Problem, class Solution> class MyClientHandler: public ClientHandler {
+private:
+    Solver<Problem,Solution>* solver;
+    CacheManager<Problem, Solution>* cm;
+    list<State<MyPoint>*>* l = new list<State<MyPoint>*>();
+public:
+    MyClientHandler(Solver<string,string>* newSolver, CacheManager<string,string>* newCM) {
         this->solver = newSolver;
         this->cm = newCM;
     };

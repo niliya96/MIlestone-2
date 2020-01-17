@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/aaa/Downloads/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/aaa/Downloads/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/idan/CLionProjects/MIlestone-2
+CMAKE_SOURCE_DIR = /home/aaa/CLionProjects/MIlestone-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/idan/CLionProjects/MIlestone-2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/aaa/CLionProjects/MIlestone-2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/idan/CLionProjects/MIlestone-2/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/99/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/aaa/Downloads/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/99/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/aaa/Downloads/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles /home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles /home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,33 @@ cacheManager/FileCacheManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.s
 .PHONY : cacheManager/FileCacheManager.cpp.s
 
+client/MyClientHandler.o: client/MyClientHandler.cpp.o
+
+.PHONY : client/MyClientHandler.o
+
+# target to build an object file
+client/MyClientHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/client/MyClientHandler.cpp.o
+.PHONY : client/MyClientHandler.cpp.o
+
+client/MyClientHandler.i: client/MyClientHandler.cpp.i
+
+.PHONY : client/MyClientHandler.i
+
+# target to preprocess a source file
+client/MyClientHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/client/MyClientHandler.cpp.i
+.PHONY : client/MyClientHandler.cpp.i
+
+client/MyClientHandler.s: client/MyClientHandler.cpp.s
+
+.PHONY : client/MyClientHandler.s
+
+# target to generate assembly for a file
+client/MyClientHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/client/MyClientHandler.cpp.s
+.PHONY : client/MyClientHandler.cpp.s
+
 client/MyTestClientHandler.o: client/MyTestClientHandler.cpp.o
 
 .PHONY : client/MyTestClientHandler.o
@@ -204,6 +231,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+searchable/Matrix.o: searchable/Matrix.cpp.o
+
+.PHONY : searchable/Matrix.o
+
+# target to build an object file
+searchable/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.o
+.PHONY : searchable/Matrix.cpp.o
+
+searchable/Matrix.i: searchable/Matrix.cpp.i
+
+.PHONY : searchable/Matrix.i
+
+# target to preprocess a source file
+searchable/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.i
+.PHONY : searchable/Matrix.cpp.i
+
+searchable/Matrix.s: searchable/Matrix.cpp.s
+
+.PHONY : searchable/Matrix.s
+
+# target to generate assembly for a file
+searchable/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.s
+.PHONY : searchable/Matrix.cpp.s
+
+searcher/BestFS.o: searcher/BestFS.cpp.o
+
+.PHONY : searcher/BestFS.o
+
+# target to build an object file
+searcher/BestFS.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o
+.PHONY : searcher/BestFS.cpp.o
+
+searcher/BestFS.i: searcher/BestFS.cpp.i
+
+.PHONY : searcher/BestFS.i
+
+# target to preprocess a source file
+searcher/BestFS.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.i
+.PHONY : searcher/BestFS.cpp.i
+
+searcher/BestFS.s: searcher/BestFS.cpp.s
+
+.PHONY : searcher/BestFS.s
+
+# target to generate assembly for a file
+searcher/BestFS.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.s
+.PHONY : searcher/BestFS.cpp.s
+
 server/MySerialServer.o: server/MySerialServer.cpp.o
 
 .PHONY : server/MySerialServer.o
@@ -230,33 +311,6 @@ server/MySerialServer.s: server/MySerialServer.cpp.s
 server/MySerialServer.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.s
 .PHONY : server/MySerialServer.cpp.s
-
-solver/SolverAdapter.o: solver/SolverAdapter.cpp.o
-
-.PHONY : solver/SolverAdapter.o
-
-# target to build an object file
-solver/SolverAdapter.cpp.o:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o
-.PHONY : solver/SolverAdapter.cpp.o
-
-solver/SolverAdapter.i: solver/SolverAdapter.cpp.i
-
-.PHONY : solver/SolverAdapter.i
-
-# target to preprocess a source file
-solver/SolverAdapter.cpp.i:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.i
-.PHONY : solver/SolverAdapter.cpp.i
-
-solver/SolverAdapter.s: solver/SolverAdapter.cpp.s
-
-.PHONY : solver/SolverAdapter.s
-
-# target to generate assembly for a file
-solver/SolverAdapter.cpp.s:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.s
-.PHONY : solver/SolverAdapter.cpp.s
 
 solver/StringReverser.o: solver/StringReverser.cpp.o
 
@@ -297,18 +351,24 @@ help:
 	@echo "... cacheManager/FileCacheManager.o"
 	@echo "... cacheManager/FileCacheManager.i"
 	@echo "... cacheManager/FileCacheManager.s"
+	@echo "... client/MyClientHandler.o"
+	@echo "... client/MyClientHandler.i"
+	@echo "... client/MyClientHandler.s"
 	@echo "... client/MyTestClientHandler.o"
 	@echo "... client/MyTestClientHandler.i"
 	@echo "... client/MyTestClientHandler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... searchable/Matrix.o"
+	@echo "... searchable/Matrix.i"
+	@echo "... searchable/Matrix.s"
+	@echo "... searcher/BestFS.o"
+	@echo "... searcher/BestFS.i"
+	@echo "... searcher/BestFS.s"
 	@echo "... server/MySerialServer.o"
 	@echo "... server/MySerialServer.i"
 	@echo "... server/MySerialServer.s"
-	@echo "... solver/SolverAdapter.o"
-	@echo "... solver/SolverAdapter.i"
-	@echo "... solver/SolverAdapter.s"
 	@echo "... solver/StringReverser.o"
 	@echo "... solver/StringReverser.i"
 	@echo "... solver/StringReverser.s"

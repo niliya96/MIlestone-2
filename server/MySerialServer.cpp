@@ -35,7 +35,7 @@ int openServer(int port, ClientHandler* c) {
         FD_ZERO(&rfds);
         FD_SET(socketFD, &rfds);
         struct timeval tv;
-        tv.tv_sec = (long)10;
+        tv.tv_sec = (long)120;
         tv.tv_usec = 0;
         result = select(socketFD+1, &rfds, (fd_set*)0, (fd_set*)0, &tv);
         if (result > 0) {
@@ -43,6 +43,7 @@ int openServer(int port, ClientHandler* c) {
             client_socket = accept(socketFD, (struct sockaddr *) &address, &addrlen);
         }
         else {
+            shouldStop = true;
             continue;
         }
         if (client_socket == -1) {

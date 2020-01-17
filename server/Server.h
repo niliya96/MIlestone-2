@@ -42,7 +42,7 @@ public:
         server_side::Server* serialServer = new server_side::MySerialServer();
         Solver<string,string>* reverseSolver = new StringReverser<string,string>();
         CacheManager<string,string>* cm = new FileCacheManager<string,string>();
-        ClientHandler* c = new MyTestClientHandler<string,string>(reverseSolver,cm);
+        ClientHandler* c = new MyClientHandler<string,string>(reverseSolver,cm);
         serialServer->open(atoi(argv), c);
         return 0;
     };
