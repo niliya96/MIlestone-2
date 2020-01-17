@@ -204,6 +204,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+searcher/BestFS.o: searcher/BestFS.cpp.o
+
+.PHONY : searcher/BestFS.o
+
+# target to build an object file
+searcher/BestFS.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o
+.PHONY : searcher/BestFS.cpp.o
+
+searcher/BestFS.i: searcher/BestFS.cpp.i
+
+.PHONY : searcher/BestFS.i
+
+# target to preprocess a source file
+searcher/BestFS.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.i
+.PHONY : searcher/BestFS.cpp.i
+
+searcher/BestFS.s: searcher/BestFS.cpp.s
+
+.PHONY : searcher/BestFS.s
+
+# target to generate assembly for a file
+searcher/BestFS.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.s
+.PHONY : searcher/BestFS.cpp.s
+
 server/MySerialServer.o: server/MySerialServer.cpp.o
 
 .PHONY : server/MySerialServer.o
@@ -230,33 +257,6 @@ server/MySerialServer.s: server/MySerialServer.cpp.s
 server/MySerialServer.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.s
 .PHONY : server/MySerialServer.cpp.s
-
-solver/SolverAdapter.o: solver/SolverAdapter.cpp.o
-
-.PHONY : solver/SolverAdapter.o
-
-# target to build an object file
-solver/SolverAdapter.cpp.o:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o
-.PHONY : solver/SolverAdapter.cpp.o
-
-solver/SolverAdapter.i: solver/SolverAdapter.cpp.i
-
-.PHONY : solver/SolverAdapter.i
-
-# target to preprocess a source file
-solver/SolverAdapter.cpp.i:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.i
-.PHONY : solver/SolverAdapter.cpp.i
-
-solver/SolverAdapter.s: solver/SolverAdapter.cpp.s
-
-.PHONY : solver/SolverAdapter.s
-
-# target to generate assembly for a file
-solver/SolverAdapter.cpp.s:
-	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.s
-.PHONY : solver/SolverAdapter.cpp.s
 
 solver/StringReverser.o: solver/StringReverser.cpp.o
 
@@ -303,12 +303,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... searcher/BestFS.o"
+	@echo "... searcher/BestFS.i"
+	@echo "... searcher/BestFS.s"
 	@echo "... server/MySerialServer.o"
 	@echo "... server/MySerialServer.i"
 	@echo "... server/MySerialServer.s"
-	@echo "... solver/SolverAdapter.o"
-	@echo "... solver/SolverAdapter.i"
-	@echo "... solver/SolverAdapter.s"
 	@echo "... solver/StringReverser.o"
 	@echo "... solver/StringReverser.i"
 	@echo "... solver/StringReverser.s"

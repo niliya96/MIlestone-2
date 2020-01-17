@@ -14,12 +14,6 @@ string
 list
 -
 
-/home/idan/CLionProjects/MIlestone-2/cacheManager/FileCacheManager.cpp
-fstream
--
-CacheManager.h
-/home/idan/CLionProjects/MIlestone-2/cacheManager/CacheManager.h
-
 /home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
 ../solver/Solver.h
 /home/idan/CLionProjects/MIlestone-2/solver/Solver.h
@@ -41,14 +35,6 @@ iostream
 -
 sstream
 -
-
-/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp
-ClientHandler.h
-/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
-
-/home/idan/CLionProjects/MIlestone-2/main.cpp
-server/Server.h
-/home/idan/CLionProjects/MIlestone-2/server/Server.h
 
 /home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
 
@@ -91,12 +77,4 @@ iostream
 /home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h
 string
 -
-
-/home/idan/CLionProjects/MIlestone-2/solver/SolverAdapter.cpp
-Solver.h
-/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
-
-/home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp
-Solver.h
-/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
 

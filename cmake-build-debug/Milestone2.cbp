@@ -99,6 +99,12 @@
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/main.cpp">
 			<Option target="Milestone2"/>
 		</Unit>
+		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searchable/State.h">
+			<Option target="Milestone2"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp">
+			<Option target="Milestone2"/>
+		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h">
 			<Option target="Milestone2"/>
 		</Unit>
@@ -109,9 +115,6 @@
 			<Option target="Milestone2"/>
 		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/solver/Solver.h">
-			<Option target="Milestone2"/>
-		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/solver/SolverAdapter.cpp">
 			<Option target="Milestone2"/>
 		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp">

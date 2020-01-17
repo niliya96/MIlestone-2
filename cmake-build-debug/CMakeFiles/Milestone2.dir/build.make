@@ -109,22 +109,9 @@ CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp -o CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.s
 
-CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o: CMakeFiles/Milestone2.dir/flags.make
-CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o: ../solver/SolverAdapter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o -c /home/idan/CLionProjects/MIlestone-2/solver/SolverAdapter.cpp
-
-CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/MIlestone-2/solver/SolverAdapter.cpp > CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.i
-
-CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/MIlestone-2/solver/SolverAdapter.cpp -o CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.s
-
 CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o: CMakeFiles/Milestone2.dir/flags.make
 CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o: ../cacheManager/FileCacheManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o -c /home/idan/CLionProjects/MIlestone-2/cacheManager/FileCacheManager.cpp
 
 CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.i: cmake_force
@@ -135,14 +122,27 @@ CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/MIlestone-2/cacheManager/FileCacheManager.cpp -o CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.s
 
+CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o: CMakeFiles/Milestone2.dir/flags.make
+CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o: ../searcher/BestFS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o -c /home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp
+
+CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp > CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.i
+
+CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp -o CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.s
+
 # Object files for target Milestone2
 Milestone2_OBJECTS = \
 "CMakeFiles/Milestone2.dir/main.cpp.o" \
 "CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o" \
 "CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o" \
 "CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o" \
-"CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o" \
-"CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o"
+"CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o" \
+"CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o"
 
 # External object files for target Milestone2
 Milestone2_EXTERNAL_OBJECTS =
@@ -151,8 +151,8 @@ Milestone2: CMakeFiles/Milestone2.dir/main.cpp.o
 Milestone2: CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o
 Milestone2: CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o
 Milestone2: CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o
-Milestone2: CMakeFiles/Milestone2.dir/solver/SolverAdapter.cpp.o
 Milestone2: CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o
+Milestone2: CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o
 Milestone2: CMakeFiles/Milestone2.dir/build.make
 Milestone2: CMakeFiles/Milestone2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Milestone2"
