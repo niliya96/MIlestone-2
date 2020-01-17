@@ -35,7 +35,7 @@ private:
     CacheManager<Problem, Solution>* cm;
     list<State<MyPoint>*>* l = new list<State<MyPoint>*>();
 public:
-    MyClientHandler(Solver<string,string>* newSolver, CacheManager<string,string>* newCM) {
+    MyClientHandler(Solver<Problem,Solution>* newSolver, CacheManager<Problem,Solution>* newCM) {
         this->solver = newSolver;
         this->cm = newCM;
     };

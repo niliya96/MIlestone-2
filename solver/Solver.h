@@ -20,6 +20,6 @@ public:
     };
     Solution solve(Problem p) {
         return s->search(p);
-    }
+    };
 };
 #endif //MILESTONE2_SOLVER_H

@@ -21,7 +21,7 @@ public:
         this->currentState = newState;
     };
     bool equals(State<T>* otherState) {
-        return (strcmp(this->stateName, otherState.getStateName()) == 0);
+        return (strcmp(this->stateName, otherState->getStateName()) == 0);
     };
     string getStateName() {
         return this->stateName;
@@ -34,6 +34,12 @@ public:
     }
     double getCost(){
         return this->cost;
+    }
+    void setCost(double newCost) {
+        this->cost = newCost;
+    }
+    T* getCurrentState() {
+        return this->currentState;
     }
 };
 

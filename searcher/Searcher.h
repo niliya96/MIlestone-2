@@ -7,15 +7,18 @@ using namespace std;
 
 template <class T, class Solution> class Searcher {
 public:
-    virtual Solution search(Searchable<T> s) = 0;
+    virtual Solution search(Searchable<T>* s) = 0;
+
 };
 
 template <class T, class Solution> class BestFS : public Searcher<T, Solution> {
 private:
-    queue<State<MyPoint>*>* openList = new queue<State<MyPoint>*>();
-    int evaluatedNotes;
+    queue<State<T>*>* openList = new queue<State<T>*>();
+    int evaluatedNotes = 0;
 public:
-    Solution search(Searchable<T> s);
-    State<MyPoint>* popOpenList();
+    Solution search(Searchable<T>* s) {
+
+    }
+    State<T>* popOpenList();
 };
 #endif //MILESTONE2_SEARCHER_H

@@ -25,6 +25,9 @@ public:
     State<MyPoint>* getIntialState();
     State<MyPoint>* getGoalState();
     list<State<MyPoint>*>* getAllPossibleStates(State<MyPoint>* s);
+    string toString() {
+        return "nili";
+    }
 };
 
 class MyPoint {

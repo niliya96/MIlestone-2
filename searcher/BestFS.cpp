@@ -6,14 +6,9 @@ using namespace std;
 template<class T,class Solution> class BestFS;
 
 template<class T, class Solution>
-Solution BestFS<T, Solution>::search(Searchable <T> s) {
-
-}
-
-template<class T, class Solution>
-State<MyPoint>* BestFS<T, Solution>::popOpenList() {
+State<T>* BestFS<T, Solution>::popOpenList() {
     evaluatedNotes++;
-    State<MyPoint>* poppedState = this->openList->front();
+    State<T>* poppedState = this->openList->front();
     this->openList->pop();
-    //return
+    return poppedState;
 };
