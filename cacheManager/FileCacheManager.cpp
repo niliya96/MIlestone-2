@@ -59,7 +59,7 @@ Solution FileCacheManager<Problem, Solution>::get(Problem p) {
                 orderedList->push_front(std::make_pair(p,solution));
                 (*cache)[p] = orderedList->begin();
             }
-            //if there's room in the cache
+                //if there's room in the cache
             else {
                 //just push the new entry
                 orderedList->push_front(std::make_pair(p, solution));
@@ -67,7 +67,7 @@ Solution FileCacheManager<Problem, Solution>::get(Problem p) {
             }
             return solution;
         }
-        //it is in cache
+            //it is in cache
         else {
             //erase item from list and push it again
             orderedList->push_front(*(*cache)[p]);
@@ -76,7 +76,7 @@ Solution FileCacheManager<Problem, Solution>::get(Problem p) {
             return orderedList->front().second;
         }
     }
-    //its not in cache or disk
+        //its not in cache or disk
     else {
         return nullptr;
     }
@@ -88,7 +88,7 @@ bool FileCacheManager<Problem, Solution>::isExist(Problem p) {
     if(this->cache->find(p) != this->cache->end()) {
         return true;
     }
-    //if it's not in cache, search in disk
+        //if it's not in cache, search in disk
     else {
         string s = p +".txt";
         ifstream f(s);

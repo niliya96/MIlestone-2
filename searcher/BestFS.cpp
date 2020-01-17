@@ -11,7 +11,7 @@ Solution BestFS<T, Solution>::search(Searchable <T> s) {
 }
 
 template<class T, class Solution>
-State<MyPoint> *BestFS<T, Solution>::popOpenList() {
+State<MyPoint>* BestFS<T, Solution>::popOpenList() {
     evaluatedNotes++;
     State<MyPoint>* poppedState = this->openList->front();
     this->openList->pop();

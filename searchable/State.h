@@ -11,12 +11,16 @@ template <class T> class State{
 private:
     string stateName;
     double cost;
-    State<T> cameFrom;
+    T* currentState;
+    State<T>* cameFrom;
 public:
     State(string newState) {
         this->stateName = newState;
     };
-    bool equals(State otherState) {
+    State(T* newState) {
+        this->currentState = newState;
+    };
+    bool equals(State<T>* otherState) {
         return (strcmp(this->stateName, otherState.getStateName()) == 0);
     };
     string getStateName() {
@@ -25,7 +29,7 @@ public:
     State<T> getCameFrom() {
         return this->cameFrom;
     }
-    void setCameFrom(State<T> s) {
+    void setCameFrom(State<T>* s) {
         this->cameFrom = s;
     }
     double getCost(){
