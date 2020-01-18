@@ -10,7 +10,7 @@ using namespace std;
 template <class T> class State{
 private:
     string stateName;
-    double cost;
+    double cost = 99999999999;
     T* currentState;
     State<T>* cameFrom;
 public:
@@ -26,7 +26,7 @@ public:
     string getStateName() {
         return this->stateName;
     };
-    State<T> getCameFrom() {
+    State<T>* getCameFrom() {
         return this->cameFrom;
     }
     void setCameFrom(State<T>* s) {

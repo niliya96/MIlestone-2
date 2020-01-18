@@ -42,7 +42,6 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                         }
                         s = new MyPoint(i,j,value);
                         startState = new State<MyPoint>(s);
-                        startState->setCost(value);
                         flag = 1;
                     }
                     else {
@@ -53,7 +52,6 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                         }
                         t = new MyPoint(i,j, value);
                         targetState = new State<MyPoint>(t);
-                        targetState->setCost(value);
                     }
                     break;
                 }
@@ -90,7 +88,6 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                     // new point
                     MyPoint* p = new MyPoint(row, col, val);
                     State<MyPoint>* state = new State<MyPoint>(p);
-                    state->setCost(val);
                     this->l->push_front(state);
                     sizeOfMatrix = col;
                     countSize = true;
@@ -109,7 +106,6 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                     // new point
                     MyPoint* p = new MyPoint(row, col, val);
                     State<MyPoint>* state = new State<MyPoint>(p);
-                    state->setCost(val);
                     this->l->push_front(state);
                     col++;
                     accum = "";
@@ -121,8 +117,8 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
             }
         }
     }
-    Searchable<MyPoint>* matrix = new Matrix<MyPoint>(this->l, startState, targetState);
-    //this->solve(matrix);
+    Searchable<MyPoint>* matrix = new Matrix<MyPoint>(this->l, startState, targetState, sizeOfMatrix);
+    this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix));
     /**TODO after cacheManager
     string message;
     //search solution in cache

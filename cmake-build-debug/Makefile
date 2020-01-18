@@ -258,6 +258,33 @@ searchable/Matrix.cpp.s:
 	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.s
 .PHONY : searchable/Matrix.cpp.s
 
+searcher/AStar.o: searcher/AStar.cpp.o
+
+.PHONY : searcher/AStar.o
+
+# target to build an object file
+searcher/AStar.cpp.o:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/AStar.cpp.o
+.PHONY : searcher/AStar.cpp.o
+
+searcher/AStar.i: searcher/AStar.cpp.i
+
+.PHONY : searcher/AStar.i
+
+# target to preprocess a source file
+searcher/AStar.cpp.i:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/AStar.cpp.i
+.PHONY : searcher/AStar.cpp.i
+
+searcher/AStar.s: searcher/AStar.cpp.s
+
+.PHONY : searcher/AStar.s
+
+# target to generate assembly for a file
+searcher/AStar.cpp.s:
+	$(MAKE) -f CMakeFiles/Milestone2.dir/build.make CMakeFiles/Milestone2.dir/searcher/AStar.cpp.s
+.PHONY : searcher/AStar.cpp.s
+
 searcher/BestFS.o: searcher/BestFS.cpp.o
 
 .PHONY : searcher/BestFS.o
@@ -363,6 +390,9 @@ help:
 	@echo "... searchable/Matrix.o"
 	@echo "... searchable/Matrix.i"
 	@echo "... searchable/Matrix.s"
+	@echo "... searcher/AStar.o"
+	@echo "... searcher/AStar.i"
+	@echo "... searcher/AStar.s"
 	@echo "... searcher/BestFS.o"
 	@echo "... searcher/BestFS.i"
 	@echo "... searcher/BestFS.s"

@@ -5,6 +5,7 @@ using namespace std;
 #include <string>
 #include <list>
 #include <fstream>
+
 template <class Problem, class Solution> class CacheManager {
 public:
     virtual bool isExist(Problem p) = 0;
@@ -116,7 +117,9 @@ public:
         return solution;
     };
     void writeFile(Problem problem, Solution solution) {
-        string s = problem->toString() +".txt";
+        int problemHashCode = hash<string>()(problem->toString());
+        string stringedProblemHashCode = to_string(problemHashCode);
+        string s = problemHashCode + ".txt";
         ofstream out_file;
         out_file.open (s);
         out_file << solution;

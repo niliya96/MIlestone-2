@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o"
   "CMakeFiles/Milestone2.dir/main.cpp.o"
   "CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.o"
+  "CMakeFiles/Milestone2.dir/searcher/AStar.cpp.o"
   "CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o"
   "CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o"
   "CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o"

@@ -6,9 +6,11 @@ using namespace std;
 class MyPoint;
 
 template <class T> class Searchable {
+public:
     virtual State<T>* getIntialState() = 0;
     virtual State<T>* getGoalState() = 0;
     virtual list<State<T>*>* getAllPossibleStates(State<T>* s) = 0;
+    virtual ~Searchable() = default;
 };
 
 template <class T> class Matrix: public Searchable<T> {
@@ -16,18 +18,21 @@ private:
     list<State<MyPoint>*>* stateList;
     State<MyPoint>* s;
     State<MyPoint>* t;
+    int N;
 public:
-    Matrix(list<State<MyPoint>*>* l, State<MyPoint>* start, State<MyPoint>* target) {
+    Matrix(list<State<MyPoint>*>* l, State<MyPoint>* start, State<MyPoint>* target, int newN) {
         this->stateList = l;
         this->s = start;
         this->t = target;
+        this->N = newN;
     }
     State<MyPoint>* getIntialState();
     State<MyPoint>* getGoalState();
     list<State<MyPoint>*>* getAllPossibleStates(State<MyPoint>* s);
-    string toString() {
-        return "nili";
+    int getN() {
+        return this->N;
     }
+    string toString();
 };
 
 class MyPoint {

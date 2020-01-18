@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="Milestone2"/>
+		<Option title="Milestone-2"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -93,28 +93,10 @@
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h">
 			<Option target="Milestone2"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/client/MyClientHandler.cpp">
-			<Option target="Milestone2"/>
-		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp">
 			<Option target="Milestone2"/>
 		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/main.cpp">
-			<Option target="Milestone2"/>
-		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searchable/Matrix.cpp">
-			<Option target="Milestone2"/>
-		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searchable/State.h">
-			<Option target="Milestone2"/>
-		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searcher/AStar.cpp">
-			<Option target="Milestone2"/>
-		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp">
-			<Option target="Milestone2"/>
-		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h">
 			<Option target="Milestone2"/>
 		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/server/MySerialServer.cpp">
@@ -124,9 +106,6 @@
 			<Option target="Milestone2"/>
 		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/solver/Solver.h">
-			<Option target="Milestone2"/>
-		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp">
 			<Option target="Milestone2"/>
 		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/CMakeLists.txt">
