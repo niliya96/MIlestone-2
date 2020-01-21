@@ -1,8 +1,11 @@
 #include <sys/socket.h>
 #include "Server.h"
 using namespace server_side;
-
-int openServerSerial(int port, ClientHandler* c) {
+int handle(ClientHandler* c, int socket_client) {
+    c->handleClient(socket_client);
+    close(socket_client);
+}
+int openServer(int port, ClientHandler* c) {
     //creates socket and checks if created
     int socketFD = socket(AF_INET, SOCK_STREAM, 0);
     if (socketFD == -1) {
@@ -50,17 +53,17 @@ int openServerSerial(int port, ClientHandler* c) {
         if (client_socket == -1) {
             return -4;
         }
-        c->handleClient(client_socket);
-        close(client_socket);
+        thread ClientParallel(handle,c, client_socket);
+        ClientParallel.detach();
     }
     close(socketFD);
     return 0;
 
 }
-void MySerialServer::open(int port, ClientHandler* c) {
-    thread server(openServerSerial, port, c);
-    server.join();
+void MyParallelServer::open(int port, ClientHandler* c) {
+    thread parallelserver(openServer, port, c);
+    parallelserver.join();
 }
-void MySerialServer::stop() {
+void MyParallelServer::stop() {
 
 }

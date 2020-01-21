@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/idan/CLionProjects/MIlestone-2/cacheManager/CacheManager.h
+/home/aaa/CLionProjects/MIlestone-2/cacheManager/CacheManager.h
 map
 -
 string
@@ -16,11 +16,11 @@ list
 fstream
 -
 
-/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
+/home/aaa/CLionProjects/MIlestone-2/client/ClientHandler.h
 ../solver/Solver.h
-/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
+/home/aaa/CLionProjects/MIlestone-2/solver/Solver.h
 ../cacheManager/CacheManager.h
-/home/idan/CLionProjects/MIlestone-2/cacheManager/CacheManager.h
+/home/aaa/CLionProjects/MIlestone-2/cacheManager/CacheManager.h
 sys/socket.h
 -
 string
@@ -40,27 +40,19 @@ sstream
 list
 -
 
-/home/idan/CLionProjects/MIlestone-2/client/MyClientHandler.cpp
-ClientHandler.h
-/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
-
-/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp
-ClientHandler.h
-/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
-
-/home/idan/CLionProjects/MIlestone-2/main.cpp
+/home/aaa/CLionProjects/MIlestone-2/main.cpp
 server/Server.h
-/home/idan/CLionProjects/MIlestone-2/server/Server.h
+/home/aaa/CLionProjects/MIlestone-2/server/Server.h
 
-/home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
+/home/aaa/CLionProjects/MIlestone-2/searchable/Searchable.h
 list
 -
 State.h
-/home/idan/CLionProjects/MIlestone-2/searchable/State.h
+/home/aaa/CLionProjects/MIlestone-2/searchable/State.h
 
-/home/idan/CLionProjects/MIlestone-2/searchable/State.h
+/home/aaa/CLionProjects/MIlestone-2/searchable/State.h
 Searchable.h
-/home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
+/home/aaa/CLionProjects/MIlestone-2/searchable/Searchable.h
 stdio.h
 -
 string
@@ -68,17 +60,9 @@ string
 string.h
 -
 
-/home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp
-Searcher.h
-/home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h
-stdlib.h
--
-string
--
-
-/home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h
+/home/aaa/CLionProjects/MIlestone-2/searcher/Searcher.h
 ../searchable/Searchable.h
-/home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
+/home/aaa/CLionProjects/MIlestone-2/searchable/Searchable.h
 string
 -
 queue
@@ -94,19 +78,25 @@ stack
 iostream
 -
 
-/home/idan/CLionProjects/MIlestone-2/server/MySerialServer.cpp
+/home/aaa/CLionProjects/MIlestone-2/server/MyParallelServer.cpp
 sys/socket.h
 -
 Server.h
-/home/idan/CLionProjects/MIlestone-2/server/Server.h
+/home/aaa/CLionProjects/MIlestone-2/server/Server.h
 
-/home/idan/CLionProjects/MIlestone-2/server/Server.h
+/home/aaa/CLionProjects/MIlestone-2/server/MySerialServer.cpp
+sys/socket.h
+-
+Server.h
+/home/aaa/CLionProjects/MIlestone-2/server/Server.h
+
+/home/aaa/CLionProjects/MIlestone-2/server/Server.h
 ../client/ClientHandler.h
-/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
+/home/aaa/CLionProjects/MIlestone-2/client/ClientHandler.h
 ../solver/Solver.h
-/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
+/home/aaa/CLionProjects/MIlestone-2/solver/Solver.h
 ../searchable/Searchable.h
-/home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
+/home/aaa/CLionProjects/MIlestone-2/searchable/Searchable.h
 thread
 -
 sys/socket.h
@@ -124,13 +114,9 @@ cstring
 iostream
 -
 
-/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
+/home/aaa/CLionProjects/MIlestone-2/solver/Solver.h
 ../searcher/Searcher.h
-/home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h
+/home/aaa/CLionProjects/MIlestone-2/searcher/Searcher.h
 string
 -
-
-/home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp
-Solver.h
-/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
 

@@ -4,15 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/idan/CLionProjects/MIlestone-2/cacheManager/FileCacheManager.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o"
-  "/home/idan/CLionProjects/MIlestone-2/client/MyClientHandler.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/client/MyClientHandler.cpp.o"
-  "/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o"
-  "/home/idan/CLionProjects/MIlestone-2/main.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/main.cpp.o"
-  "/home/idan/CLionProjects/MIlestone-2/searchable/Matrix.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.o"
-  "/home/idan/CLionProjects/MIlestone-2/searcher/AStar.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/searcher/AStar.cpp.o"
-  "/home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o"
-  "/home/idan/CLionProjects/MIlestone-2/server/MySerialServer.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o"
-  "/home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp" "/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/cacheManager/FileCacheManager.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/cacheManager/FileCacheManager.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/client/MyClientHandler.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/client/MyClientHandler.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/client/MyTestClientHandler.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/main.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/main.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/searchable/Matrix.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/searcher/AStar.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/searcher/AStar.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/searcher/BestFS.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/server/MyParallelServer.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/server/MySerialServer.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o"
+  "/home/aaa/CLionProjects/MIlestone-2/solver/StringReverser.cpp" "/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir/solver/StringReverser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

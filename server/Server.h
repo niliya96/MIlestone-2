@@ -29,6 +29,15 @@ namespace server_side {
         void open(int port, ClientHandler* c);
         void stop();
     };
+
+    class MyParallelServer: public Server {
+    public:
+        MyParallelServer() = default;
+        ~MyParallelServer() = default;
+    private:
+        void open(int port, ClientHandler* c);
+        void stop();
+    };
 }
 
 namespace boot {
@@ -42,7 +51,7 @@ public:
     int main(int argc, char* argv) {
 
         server_side::Server* serialServer = new server_side::MySerialServer();
-        Searcher<MyPoint,string>* alg = new BestFS<MyPoint,string>();
+        Searcher<MyPoint,string>* alg = new AStar<MyPoint,string>();
         SolverAdapter<MyPoint,Matrix<MyPoint>*,string>* solverAdapter =
                 new SolverAdapter<MyPoint,Matrix<MyPoint>*,string>(alg);
         CacheManager<Matrix<MyPoint>*,string>* cm = new FileCacheManager<Matrix<MyPoint>*,string>();

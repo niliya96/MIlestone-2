@@ -40,6 +40,15 @@ CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o: ../searchable/State.h
 CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o: ../searcher/BestFS.cpp
 CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o: ../searcher/Searcher.h
 
+CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o: ../cacheManager/CacheManager.h
+CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o: ../client/ClientHandler.h
+CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o: ../searchable/Searchable.h
+CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o: ../searchable/State.h
+CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o: ../searcher/Searcher.h
+CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o: ../server/MyParallelServer.cpp
+CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o: ../server/Server.h
+CMakeFiles/Milestone2.dir/server/MyParallelServer.cpp.o: ../solver/Solver.h
+
 CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o: ../cacheManager/CacheManager.h
 CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o: ../client/ClientHandler.h
 CMakeFiles/Milestone2.dir/server/MySerialServer.cpp.o: ../searchable/Searchable.h

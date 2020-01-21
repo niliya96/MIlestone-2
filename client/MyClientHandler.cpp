@@ -5,7 +5,7 @@ template class MyClientHandler <Matrix<MyPoint>*,string>;
 
 template<class Problem, class Solution>
 void MyClientHandler<Problem, Solution>::handleClient(int socket) {
-    int row = 1;
+    int row =0;
     int col;
     int sizeOfMatrix;
     int flag = 0;
@@ -14,12 +14,12 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
     MyPoint* t;
     State<MyPoint>* startState;
     State<MyPoint>* targetState;
-    while(true) {
-        char buffer[1024] = {0};
-        /**TODO flush*/
+    char buffer[1024] = {0};
+    do {
         int valread = read(socket, buffer, 1024);
         stringstream bufferedValues(buffer);
-        if (bufferedValues.str().compare("end\r\n") == 0) {
+        string s(buffer);
+        if (s.find("end") == 0) {
             break;
         }
         else if (row == sizeOfMatrix+1 && countSize) {
@@ -27,7 +27,7 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
             int i=0, j=0;
             int value;
             for (int w=0; w<strlen(buffer); w++) {
-                if (buffer[w] == '\r') {
+                if (buffer[w] == '\n') {
                     try {
                         j = stoi(acc);
                     }
@@ -52,6 +52,7 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                                 targetState = pointState;
                                 //targetState = new State<MyPoint>(t);
                                 targetState->setCost(value);
+                                break;
                             }
                         }
                     }
@@ -76,10 +77,10 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
            * build the matrix
            */
             string accum = "";
-            col=1;
+            col=0;
             int val;
             for (int k=0; k<strlen(buffer); k++) {
-                if (buffer[k] == '\r') {
+                if (buffer[k] == '\n') {
                     // a value
                     try {
                         val = stoi(accum);
@@ -120,7 +121,7 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                 }
             }
         }
-    }
+    } while (buffer != "end");
     //idan added
     Searchable<MyPoint>* matrix = new Matrix<MyPoint>(this->l, startState, targetState, sizeOfMatrix);
     cout << this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix)) << endl;
