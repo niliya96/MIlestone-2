@@ -10,9 +10,12 @@ using namespace std;
 template <class T> class State{
 private:
     string stateName;
-    double cost = 99999999999;
+    double cost;
+    double pathCost = 0;
+    double distanceFromGoalState;
     T* currentState;
     State<T>* cameFrom;
+    string direction;
 public:
     State(string newState) {
         this->stateName = newState;
@@ -38,8 +41,66 @@ public:
     void setCost(double newCost) {
         this->cost = newCost;
     }
+    double getPathCost(){
+        return this->pathCost;
+    }
+    void setPathCost(double newCost) {
+        this->pathCost = newCost;
+    }
     T* getCurrentState() {
         return this->currentState;
+    }
+    string getDirection(){
+        return this->direction;
+    }
+    void setDirection(string s) {
+        this->direction = s;
+    }
+
+    double getDistanceFromGoalState() {
+        return this->distanceFromGoalState;
+    }
+
+    void setDistanceFromGoalState(double newDistanceFromGoalState) {
+        this->distanceFromGoalState = newDistanceFromGoalState;
+    }
+/**
+    bool operator==(const State &rhs) const {
+        return currentState == rhs.currentState;
+    }
+
+    bool operator!=(const State &rhs) const {
+        return !(rhs == *this);
+    }
+
+    bool operator>(const State &rhs) const {
+        return this->pathCost > rhs.pathCost;
+    }
+
+    bool operator<(const State &rhs) const {
+        return this->pathCost < rhs.pathCost;
+    }**/
+};
+
+template <class T>
+struct myComparator
+{
+public:
+    int operator() (State<T>* s1, State<T>* s2)
+    {
+        return s1->getPathCost() > s2->getPathCost();
+    }
+};
+typedef struct myCompartor myCompartor;
+
+template <class T>
+struct AStarComparator
+{
+public:
+    int operator() (State<T>* s1, State<T>* s2)
+    {
+        return s1->getPathCost() + s1->getDistanceFromGoalState() >
+        s2->getPathCost() + s2->getDistanceFromGoalState();
     }
 };
 

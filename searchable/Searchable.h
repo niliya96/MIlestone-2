@@ -9,8 +9,10 @@ template <class T> class Searchable {
 public:
     virtual State<T>* getIntialState() = 0;
     virtual State<T>* getGoalState() = 0;
-    virtual list<State<T>*>* getAllPossibleStates(State<T>* s) = 0;
+    virtual list<State<T>*>* getAllPossibleStates(State<T>* s, list<State<MyPoint>*>* closed) = 0;
     virtual ~Searchable() = default;
+    virtual void updateDirection(State<T>* currentState, State<T>* cameFrom) = 0;
+    virtual double getDistance(State<T>* s1, State<T>* s2) = 0;
 };
 
 template <class T> class Matrix: public Searchable<T> {
@@ -26,9 +28,11 @@ public:
         this->t = target;
         this->N = newN;
     }
+    double getDistance(State<T>* s1, State<T>* s2);
+    void updateDirection(State<MyPoint>* currentState, State<MyPoint>* cameFrom);
     State<MyPoint>* getIntialState();
     State<MyPoint>* getGoalState();
-    list<State<MyPoint>*>* getAllPossibleStates(State<MyPoint>* s);
+    list<State<MyPoint>*>* getAllPossibleStates(State<MyPoint>* s, list<State<MyPoint>*>* closed);
     int getN() {
         return this->N;
     }
@@ -62,6 +66,15 @@ public:
     }
     MyPoint getPoint() {
         return *this;
+    }
+
+    bool operator==(const MyPoint &rhs) const {
+        return i == rhs.i &&
+               j == rhs.j;
+    }
+
+    bool operator!=(const MyPoint &rhs) const {
+        return !(rhs == *this);
     }
 };
 #endif //MILESTONE2_SEARCHABLE_H

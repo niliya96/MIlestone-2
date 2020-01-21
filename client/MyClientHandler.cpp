@@ -37,21 +37,23 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                     if (flag == 0) {
                         for (State<MyPoint>* pointState : *(this->l)) {
                             if (pointState->getCurrentState()->getX() == i && pointState->getCurrentState()->getY() == j) {
-                                value =pointState->getCurrentState()->getValue();
+                                value = pointState->getCurrentState()->getValue();
+                                startState = pointState;
+                                startState->setCost(value);
+                                startState->setPathCost(value);
                             }
                         }
-                        s = new MyPoint(i,j,value);
-                        startState = new State<MyPoint>(s);
                         flag = 1;
                     }
                     else {
                         for (State<MyPoint>* pointState : *(this->l)) {
                             if (pointState->getCurrentState()->getX() == i && pointState->getCurrentState()->getY() == j) {
                                 value =pointState->getCurrentState()->getValue();
+                                targetState = pointState;
+                                //targetState = new State<MyPoint>(t);
+                                targetState->setCost(value);
                             }
                         }
-                        t = new MyPoint(i,j, value);
-                        targetState = new State<MyPoint>(t);
                     }
                     break;
                 }
@@ -88,6 +90,7 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                     // new point
                     MyPoint* p = new MyPoint(row, col, val);
                     State<MyPoint>* state = new State<MyPoint>(p);
+                    state->setCost(val);
                     this->l->push_front(state);
                     sizeOfMatrix = col;
                     countSize = true;
@@ -106,6 +109,7 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                     // new point
                     MyPoint* p = new MyPoint(row, col, val);
                     State<MyPoint>* state = new State<MyPoint>(p);
+                    state->setCost(val);
                     this->l->push_front(state);
                     col++;
                     accum = "";
@@ -117,8 +121,11 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
             }
         }
     }
+    //idan added
     Searchable<MyPoint>* matrix = new Matrix<MyPoint>(this->l, startState, targetState, sizeOfMatrix);
-    this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix));
+    cout << this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix)) << endl;
+    cout << targetState->getPathCost() << endl;
+
     /**TODO after cacheManager
     string message;
     //search solution in cache

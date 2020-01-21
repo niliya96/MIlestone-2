@@ -33,6 +33,8 @@ CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.o: ../searchable/Matrix.cpp
 CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.o: ../searchable/Searchable.h
 CMakeFiles/Milestone2.dir/searchable/Matrix.cpp.o: ../searchable/State.h
 
+CMakeFiles/Milestone2.dir/searcher/AStar.cpp.o: ../searcher/AStar.cpp
+
 CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o: ../searchable/Searchable.h
 CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o: ../searchable/State.h
 CMakeFiles/Milestone2.dir/searcher/BestFS.cpp.o: ../searcher/BestFS.cpp
