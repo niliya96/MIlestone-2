@@ -145,25 +145,27 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
         }
     }
     Searchable<MyPoint>* matrix = new Matrix<MyPoint>(this->l, startState, targetState, sizeOfMatrix);
-    cout << this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix)) << flush << endl;
-    cout << targetState->getPathCost() << flush << endl;
+    //cout << this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix)) << flush << endl;
+    //cout << targetState->getPathCost() << flush << endl;
 
-    /**TODO after cacheManager
+    //string problemString = matrix->toString() +
+    //((SolverAdapter<MyPoint,Problem,Solution>*)this->solver)->getSearcher()->toString();
+
     string message;
     //search solution in cache
-    bool solutionExist = this->cm->isExist(bufferedValues.str());
+    bool solutionExist = this->cm->isExist((Matrix<MyPoint>*)matrix);
     //check if a solution has been found
     if(solutionExist) {
-        message = this->cm->get(bufferedValues.str());
+        message = this->cm->get((Matrix<MyPoint>*)matrix);
     }
     else {
-        message = this->solver->solve(bufferedValues.str());
-        this->cm->insert(bufferedValues.str(),message);
+        message = this->solver->solve((Matrix<MyPoint>*)matrix);
+        this->cm->insert((Matrix<MyPoint>*)matrix,message);
     }
     //send solution to client
     message = message + "\n";
     char* messageSend = const_cast<char *>(message.c_str());
     int toSend = send(socket , messageSend , strlen(messageSend), 0);
-     */
+
 }
 

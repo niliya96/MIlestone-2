@@ -5,6 +5,7 @@ using namespace std;
 #include <string>
 #include <list>
 #include <fstream>
+#include <sstream>
 
 template <class Problem, class Solution> class CacheManager {
 public:
@@ -27,9 +28,19 @@ public:
         }
             //if it's not in cache, search in disk
         else {
-            string s = p->toString() +".txt";
-            ifstream f(s);
-            return f.good();
+            //if problem is a custom object
+            try {
+                string s = p->toString() +".txt";
+                ifstream f(s);
+                return f.good();
+            }
+            //else it's a primitive/string
+            catch(...) {
+                stringstream s;
+                s << p << ".txt";
+                ifstream f(s.str());
+                return f.good();
+            }
         }
     };
     Solution get(Problem p) {
@@ -108,22 +119,47 @@ public:
         //write it in disk
         writeFile(p,s);
     };
-    string readFile(Problem p) {
-        string s = p->toString() +".txt";
-        ifstream in_file(s);
+    string readFile(Problem problem) {
         string solution;
-        getline(in_file, solution);
-        in_file.close();
+        try {
+            int problemHashCode = hash<string>()(problem->toString());
+            string stringedProblemHashCode = to_string(problemHashCode);
+            string s = stringedProblemHashCode + ".txt";
+            ifstream in_file(s);
+            getline(in_file, solution);
+            in_file.close();
+        }
+        catch(...) {
+            stringstream s;
+            s << problem << ".txt";
+            int problemHashCode = hash<string>()(s.str());
+            string stringedProblemHashCode = to_string(problemHashCode);
+            ifstream in_file(stringedProblemHashCode);
+            getline(in_file, solution);
+            in_file.close();
+        }
         return solution;
     };
     void writeFile(Problem problem, Solution solution) {
-        int problemHashCode = hash<string>()(problem->toString());
-        string stringedProblemHashCode = to_string(problemHashCode);
-        string s = problemHashCode + ".txt";
-        ofstream out_file;
-        out_file.open (s);
-        out_file << solution;
-        out_file.close();
+        try {
+            int problemHashCode = hash<string>()(problem->toString());
+            string stringedProblemHashCode = to_string(problemHashCode);
+            string s = stringedProblemHashCode + ".txt";
+            ofstream out_file;
+            out_file.open (s);
+            out_file << solution;
+            out_file.close();
+        }
+        catch(...) {
+            stringstream s;
+            s << problem << ".txt";
+            int problemHashCode = hash<string>()(s.str());
+            string stringedProblemHashCode = to_string(problemHashCode);
+            ofstream out_file;
+            out_file.open (stringedProblemHashCode);
+            out_file << solution;
+            out_file.close();
+        }
     };
 };
 

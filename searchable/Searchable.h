@@ -13,6 +13,7 @@ public:
     virtual ~Searchable() = default;
     virtual void updateDirection(State<T>* currentState, State<T>* cameFrom) = 0;
     virtual double getDistance(State<T>* s1, State<T>* s2) = 0;
+    virtual string toString() = 0;
 };
 
 template <class T> class Matrix: public Searchable<T> {

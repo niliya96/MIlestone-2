@@ -21,5 +21,8 @@ public:
     Solution solve(Problem p) {
         return s->search(p);
     };
+    Searcher<T,Solution>* getSearcher() {
+        return this->s;
+    }
 };
 #endif //MILESTONE2_SOLVER_H

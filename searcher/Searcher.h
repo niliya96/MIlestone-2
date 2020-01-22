@@ -14,6 +14,7 @@ template <class T, class Solution> class Searcher {
 protected:
     int evaluatedNotes = 0;
 public:
+    virtual string toString() = 0;
     virtual Solution search(Searchable<T>* s) = 0;
     string backTrace(State<T>* state) {
         if (state->getCameFrom() == nullptr) {
@@ -32,6 +33,9 @@ private:
             new priority_queue<State<T>*, vector<State<T>*>, myComparator<T>>();
     list<State<T>*>* closed = new list<State<T>*>();
 public:
+    string toString() {
+        return "BestFirstSearch";
+    }
     string search(Searchable<T>* s) {
         addToOpenList(s->getIntialState());
         while(this->openListSize() > 0) {
@@ -111,6 +115,9 @@ private:
             new priority_queue<State<T>*, vector<State<T>*>, struct AStarComparator<T>>();
     list<State<T>*>* closed = new list<State<T>*>();
 public:
+    string toString() {
+        return "AStar";
+    }
     string search(Searchable<T>* s) {
         addToOpenList(s->getIntialState());
         while(this->openListSize() > 0) {
@@ -192,6 +199,9 @@ private:
     list<State<T>*>* D = new list<State<T>*>;
     list<State<T>*>* closed = new list<State<T>*>();
 public:
+    string toString() {
+        return "BFS";
+    }
     Solution search(Searchable<T>* s) {
         D->push_front(s->getIntialState());
         while(!D->empty()) {
@@ -219,6 +229,9 @@ private:
     stack<State<T>*>* D = new stack<State<T>*>;
     list<State<T>*>* closed = new list<State<T>*>();
 public:
+    string toString() {
+        return "DFS";
+    }
     Solution search(Searchable<T>* s) {
         D->push(s->getIntialState());
         while(!D->empty()) {
