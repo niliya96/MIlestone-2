@@ -42,15 +42,17 @@ public:
             }
             list<State<T>*>* succerssors = s->getAllPossibleStates(n, this->closed);
             for(State<T>* state : *succerssors) {
-                if(!((find(this->closed->begin(),this->closed->end(),state) != this->closed->end()))
-                    && !(this->isInOpenList(state))) {
+                if(state->getCost() != -1
+                   && !((find(this->closed->begin(),this->closed->end(),state) != this->closed->end()))
+                   && !(this->isInOpenList(state))) {
                     state->setCameFrom(n);
                     state->setPathCost(n->getPathCost() + state->getCost());
                     s->updateDirection(state,n);
                     this->addToOpenList(state);
                 }
-                //else if current path is shorter
-                else if(state->getPathCost() > n->getPathCost() + state->getCost()) {
+                    //else if current path is shorter
+                else if(state->getCost() != -1 &&
+                        state->getPathCost() > n->getPathCost() + state->getCost()) {
                     state->setPathCost(n->getPathCost() + state->getCost());
                     state->setCameFrom(n);
                     s->updateDirection(n, state);
@@ -119,7 +121,8 @@ public:
             }
             list<State<T>*>* succerssors = s->getAllPossibleStates(n, this->closed);
             for(State<T>* state : *succerssors) {
-                if(!((find(this->closed->begin(),this->closed->end(),state) != this->closed->end()))
+                if(state->getCost() != -1
+                   && !((find(this->closed->begin(),this->closed->end(),state) != this->closed->end()))
                    && !(this->isInOpenList(state))) {
                     state->setCameFrom(n);
                     state->setDistanceFromGoalState(s->getDistance(state, s->getGoalState()));
@@ -128,8 +131,9 @@ public:
                     this->addToOpenList(state);
                 }
                     //else if current path is shorter
-                else if(state->getPathCost() + state->getDistanceFromGoalState() >
-                n->getPathCost() + state->getCost() + n->getDistanceFromGoalState()) {
+                else if(state->getCost() != -1
+                        && state->getPathCost() + state->getDistanceFromGoalState() >
+                           n->getPathCost() + state->getCost() + n->getDistanceFromGoalState()) {
                     state->setDistanceFromGoalState(s->getDistance(state, s->getGoalState()));
                     state->setPathCost(n->getPathCost() + state->getCost());
                     state->setCameFrom(n);
@@ -198,10 +202,12 @@ public:
                 return this->backTrace(x);
             }
             for(State<MyPoint>* state : *(s->getAllPossibleStates(x,this->closed))) {
-                state->setCameFrom(x);
-                state->setPathCost(x->getPathCost() + state->getCost());
-                s->updateDirection(state,x);
-                D->push(state);
+                if(state->getCost() != -1) {
+                    state->setCameFrom(x);
+                    state->setPathCost(x->getPathCost() + state->getCost());
+                    s->updateDirection(state,x);
+                    D->push(state);
+                }
             }
         }
     }
