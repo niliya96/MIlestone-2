@@ -186,6 +186,7 @@ public:
 template <class T, class Solution> class BFS : public Searcher<T, Solution> {
 private:
     queue<State<MyPoint>*>* D = new queue<State<MyPoint>*>;
+    list<State<T>*>* closed = new list<State<T>*>();
 public:
     Solution search(Searchable<T>* s) {
         D->push(s->getIntialState());
@@ -209,6 +210,7 @@ public:
 template <class T, class Solution> class DFS : public Searcher<T, Solution> {
 private:
     stack<State<MyPoint>*>* D = new stack<State<MyPoint>*>;
+    list<State<T>*>* closed = new list<State<T>*>();
 public:
     Solution search(Searchable<T>* s) {
         D->push(s->getIntialState());
