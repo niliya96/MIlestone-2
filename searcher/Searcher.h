@@ -189,13 +189,40 @@ public:
 
 template <class T, class Solution> class BFS : public Searcher<T, Solution> {
 private:
-    queue<State<MyPoint>*>* D = new queue<State<MyPoint>*>;
+    list<State<T>*>* D = new list<State<T>*>;
+    list<State<T>*>* closed = new list<State<T>*>();
+public:
+    Solution search(Searchable<T>* s) {
+        D->push_front(s->getIntialState());
+        while(!D->empty()) {
+            cout << D->size() << " " << this->closed->size() << endl;
+            State<MyPoint>* x = D->front();
+            D->pop_front();
+            this->closed->push_back(x);
+            if(x == s->getGoalState()) {
+                return this->backTrace(x);
+            }
+            for(State<MyPoint>* state : *(s->getAllPossibleStates(x,this->closed))) {
+                if(state->getCost() != -1 && find(D->begin(), D->end(), state) == D->end()) {
+                    state->setCameFrom(x);
+                    state->setPathCost(x->getPathCost() + state->getCost());
+                    s->updateDirection(state, x);
+                    D->push_back(state);
+                }
+            }
+        }
+    }
+};
+
+template <class T, class Solution> class DFS : public Searcher<T, Solution> {
+private:
+    stack<State<T>*>* D = new stack<State<T>*>;
     list<State<T>*>* closed = new list<State<T>*>();
 public:
     Solution search(Searchable<T>* s) {
         D->push(s->getIntialState());
-        while(D->size() > 0) {
-            State<MyPoint>* x = D->front();
+        while(!D->empty()) {
+            State<MyPoint>* x = D->top();
             D->pop();
             this->closed->push_front(x);
             if(x == s->getGoalState()) {
@@ -205,33 +232,9 @@ public:
                 if(state->getCost() != -1) {
                     state->setCameFrom(x);
                     state->setPathCost(x->getPathCost() + state->getCost());
-                    s->updateDirection(state,x);
+                    s->updateDirection(state, x);
                     D->push(state);
                 }
-            }
-        }
-    }
-};
-
-template <class T, class Solution> class DFS : public Searcher<T, Solution> {
-private:
-    stack<State<MyPoint>*>* D = new stack<State<MyPoint>*>;
-    list<State<T>*>* closed = new list<State<T>*>();
-public:
-    Solution search(Searchable<T>* s) {
-        D->push(s->getIntialState());
-        while(D->size() > 0) {
-            State<MyPoint>* x = D->top();
-            D->pop();
-            this->closed->push_front(x);
-            if(x == s->getGoalState()) {
-                return this->backTrace(x);
-            }
-            for(State<MyPoint>* state : *(s->getAllPossibleStates(x,this->closed))) {
-                state->setCameFrom(x);
-                state->setPathCost(x->getPathCost() + state->getCost());
-                s->updateDirection(state,x);
-                D->push(state);
             }
         }
     }

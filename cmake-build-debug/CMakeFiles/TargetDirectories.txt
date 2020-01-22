@@ -1,3 +1,0 @@
-/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/Milestone2.dir
-/home/aaa/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles/edit_cache.dir

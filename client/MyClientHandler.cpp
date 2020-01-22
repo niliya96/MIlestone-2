@@ -145,8 +145,8 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
         }
     }
     Searchable<MyPoint>* matrix = new Matrix<MyPoint>(this->l, startState, targetState, sizeOfMatrix);
-    cout << this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix)) << endl;
-    cout << targetState->getPathCost() << endl;
+    cout << this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix)) << flush << endl;
+    cout << targetState->getPathCost() << flush << endl;
 
     /**TODO after cacheManager
     string message;
