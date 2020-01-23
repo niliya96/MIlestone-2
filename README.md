@@ -49,4 +49,5 @@ First you need to switch the alternative code which is in ```Server.h```, then r
 ## Acknowledgments
 
 * We'd like to thank our families and friends again(*) for supporting us during the making of this project.
+
 *(we already thanked them once after Milestone 1)
