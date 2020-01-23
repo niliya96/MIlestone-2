@@ -1,5 +1,5 @@
 # Milestone-2
-Advanced Programming 1, Computer Science Mahor at Bar-Ilan University
+Advanced Programming 1, Computer Science Major at Bar-Ilan University
 
 [Link to project's github repository](https://github.com/niliya96/MIlestone-2)
 
