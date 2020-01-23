@@ -1,0 +1,215 @@
+commit 425c0f79dbad315b50af0e68d0ff68e3ef430ed8
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Thu Jan 23 15:22:21 2020 +0200
+
+    Fixed StringReverser issues
+    need to add notes and such
+
+commit 549d74d824fde29e0ef708d235fe42b5c2463b83
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Thu Jan 23 13:46:07 2020 +0200
+
+    Fixed CacheManager issues
+    need to add notes and such
+
+commit 447215c5edf8b3084b74d3b406d669a398bc249b
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Thu Jan 23 13:45:44 2020 +0200
+
+    Fixed CacheManager issues
+    need to add notes and such
+
+commit 09521f53331c4d2edb17c448683cba37a45dcfb1
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Wed Jan 22 21:56:18 2020 +0200
+
+    I think we're done.
+    need to do graphs and do some tests.
+
+commit bffcc570ed311b50e0533885ea9fc51c1fb4b94d
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Wed Jan 22 20:05:08 2020 +0200
+
+    All algorithms work
+    Need to finish CacheManager
+
+commit 6e644aee1c199a91141f9eedda64a19de0cc7443
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Wed Jan 22 17:16:42 2020 +0200
+
+    MyClientHandler now supports un-square matrixes
+    Astar and BestFs fixed
+
+commit 33acd7354c5ce4120e1ffadc59490fdea709503f
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Wed Jan 22 16:38:28 2020 +0200
+
+    MyClientHandler now supports un-square matrixes
+    Algorithms still not fixed
+
+commit 04ea492079c7a9a2b55af03a01cd1675d0b691b0
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Tue Jan 21 23:14:51 2020 +0200
+
+    parallel server
+    changes in myClientHandler
+    After Roiee's test (we need to debug)
+    BFS and DFS have some linker bugs.
+
+commit 30fe518b08414181290ef2dcb96c3dff68e068c9
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Tue Jan 21 20:28:03 2020 +0200
+
+    -BestFS works
+    -BFS works (only two tests was made)
+    -DFS works (only one test was made)
+    -seems like we finished AStar, but we need to check it.
+    -ALL ALGORITHMS NEED BE CHECKED WITH PYTHON
+    -need to make FileCacheManager support to_string(p)/ toString(p) instead of only string Problems
+
+commit 55567d5a28e29d73ef627a1ad7210a2a45a91211
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Sun Jan 19 00:05:39 2020 +0200
+
+    - BestFS near finish
+    - Need to figure out AStar
+    - Start other algorithms
+
+commit 6c3861c823c6000d2617283cbb08af6749b5af96
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Fri Jan 17 16:54:51 2020 +0200
+
+    -Finished exercise structure
+    -BestFS hasn't finished
+
+commit 8e98bb600094710084394334ca0f223058fe47de
+Merge: ac38097 ac8f32f
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Fri Jan 17 13:22:22 2020 +0200
+
+    Merge branch 'master' of https://github.com/niliya96/MIlestone-2
+    
+     Conflicts:
+    	CMakeLists.txt
+    	cmake-build-debug/CMakeFiles/Makefile.cmake
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/CXX.includecache
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/DependInfo.cmake
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/build.make
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/cmake_clean.cmake
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/link.txt
+    	cmake-build-debug/CMakeFiles/clion-log.txt
+    	cmake-build-debug/Makefile
+    	cmake-build-debug/Milestone2.cbp
+    	searchable/Searchable.h
+    	searchable/State.h
+    	searcher/BestFS.cpp
+    	searcher/Searcher.h
+
+commit ac3809706cec61ca588f1041a2c64ee1fe09f5c4
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Fri Jan 17 13:21:41 2020 +0200
+
+    -
+
+commit ac8f32fe425a15456871d646448df896468a4694
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Fri Jan 17 12:36:09 2020 +0200
+
+    change of part c
+
+commit 3d99f528916666dc2fa85856146962bf9a9366bc
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Thu Jan 16 17:05:03 2020 +0200
+
+    -"end" fixed
+    -need to fix the timeout thing
+    -nili added searchable and searcher
+
+commit 2d0791a9c417ea6b487217d4f24a484c81a68fad
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Wed Jan 15 21:20:57 2020 +0200
+
+    start of part c
+
+commit 1291db9ed9f0d2dc44855ff6a02ba78abef41a83
+Merge: c9035f6 17070b7
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Wed Jan 15 21:19:26 2020 +0200
+
+    Merge branch 'master' of https://github.com/niliya96/MIlestone-2
+    
+     Conflicts:
+    	cmake-build-debug/CMakeFiles/Makefile.cmake
+    	cmake-build-debug/CMakeFiles/Makefile2
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/DependInfo.cmake
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/build.make
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/cmake_clean.cmake
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/link.txt
+    	cmake-build-debug/CMakeFiles/Milestone2.dir/progress.make
+    	cmake-build-debug/CMakeFiles/clion-log.txt
+    	cmake-build-debug/CMakeFiles/progress.marks
+    	cmake-build-debug/Makefile
+    	cmake-build-debug/Milestone2.cbp
+
+commit c9035f6866b7949bfb8c41224c38e226e2a37a61
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Wed Jan 15 19:14:26 2020 +0200
+
+    need to update
+
+commit 17070b732039498537733eb4aa83d1f8925d3dcc
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Wed Jan 15 19:07:03 2020 +0200
+
+    -"end" fixed
+    -need to fix the timeout thing
+
+commit 2855fd3b10c3b1d5c8e5dcccd2bb012b88ebc481
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Wed Jan 15 18:08:49 2020 +0200
+
+    Part A and B are completed
+
+commit f3feb71efb9088af76af04c3fb87f3cc9e3b95c1
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Wed Jan 15 17:29:24 2020 +0200
+
+    commit
+
+commit 05b97821532f2effe2933540fba01a11fdebc49d
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Tue Jan 14 23:28:20 2020 +0200
+
+    Almost finished part A and B, we just need to fix link issue with MySerialServer.
+    LETS GO
+
+commit cf855aaa08a2cc8ae77faa0f1ba6cb8e51e0a28c
+Merge: 3041ccf 66eb26a
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Tue Jan 14 18:09:55 2020 +0200
+
+    Merge branch 'master' of https://github.com/niliya96/MIlestone-2
+
+commit 3041ccf32567aea349f3cf07f7f93a278f772f3f
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Tue Jan 14 18:09:47 2020 +0200
+
+    irrelevant
+
+commit 66eb26acf5eb866e76571c9338e2d5876c23921b
+Author: niliya96 <1niliya1@gmail.com>
+Date:   Mon Jan 13 23:17:49 2020 +0200
+
+    part a, and part b (not complite)
+
+commit d8e36969717cac62f6647dbbe4384c8d2d56a38a
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Mon Jan 13 17:51:53 2020 +0200
+
+    part a
+
+commit 36598bcd0ffb50573e68e9dca2c680be7d615709
+Author: Idany95 <58816983+Idany95@users.noreply.github.com>
+Date:   Mon Jan 13 16:46:42 2020 +0200
+
+    Add files via upload
