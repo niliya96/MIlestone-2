@@ -2,6 +2,7 @@
 #define MILESTONE2_CLIENTHANDLER_H
 #include "../solver/Solver.h"
 #include "../cacheManager/CacheManager.h"
+#include "String.h"
 #include <sys/socket.h>
 #include <string>
 #include <unistd.h>
@@ -22,7 +23,7 @@ private:
     Solver<Problem,Solution>* solver;
     CacheManager<Problem, Solution>* cm;
 public:
-    MyTestClientHandler(Solver<string,string>* newSolver, CacheManager<string,string>* newCM) {
+    MyTestClientHandler(Solver<String*,string>* newSolver, CacheManager<String*,string>* newCM) {
         this->solver = newSolver;
         this->cm = newCM;
     };

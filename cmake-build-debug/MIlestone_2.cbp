@@ -111,6 +111,9 @@
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp">
 			<Option target="MIlestone_2"/>
 		</Unit>
+		<Unit filename="/home/idan/CLionProjects/MIlestone-2/client/String.h">
+			<Option target="MIlestone_2"/>
+		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/main.cpp">
 			<Option target="MIlestone_2"/>
 		</Unit>

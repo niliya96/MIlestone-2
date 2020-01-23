@@ -1,6 +1,6 @@
 #include "ClientHandler.h"
 using namespace std;
-template<> void MyTestClientHandler<string, string>::handleClient(int socket) {
+template<> void MyTestClientHandler<String*, string>::handleClient(int socket) {
     while(true) {
         char buffer[1024] = {0};
         /**TODO flush*/
@@ -9,16 +9,17 @@ template<> void MyTestClientHandler<string, string>::handleClient(int socket) {
         if (bufferedValues.str().compare("end\r\n") == 0) {
             break;
         }
+        String* p = new String(bufferedValues.str());
         string message;
         //search solution in cache
-        bool solutionExist = this->cm->isExist(bufferedValues.str());
+        bool solutionExist = this->cm->isExist(p);
         //check if a solution has been found
         if(solutionExist) {
-            message = this->cm->get(bufferedValues.str());
+            message = this->cm->get(p);
         }
         else {
-            message = this->solver->solve(bufferedValues.str());
-            this->cm->insert(bufferedValues.str(),message);
+            message = this->solver->solve(p);
+            this->cm->insert(p,message);
         }
         //send solution to client
         message = message + "\n";

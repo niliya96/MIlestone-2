@@ -1,6 +1,7 @@
 #ifndef MILESTONE2_SERVER_H
 #define MILESTONE2_SERVER_H
 #include "../client/ClientHandler.h"
+#include "../client/String.h"
 #include "../solver/Solver.h"
 #include "../searchable/Searchable.h"
 #include <thread>
@@ -58,14 +59,14 @@ public:
         ClientHandler* c = new MyClientHandler<Matrix<MyPoint>*,string>(solverAdapter,cm);
         serialServer->open(atoi(argv), c);
 
-        /**
-         * TEST MY_TEST_CLIENT_HANDLER
+/**
+        //* TEST MY_TEST_CLIENT_HANDLER
         server_side::Server* serialServer = new server_side::MySerialServer();
-        Solver<string,string>* reverseSolver = new StringReverser<string,string>();
-        CacheManager<string,string>* cm = new FileCacheManager<string,string>();
-        ClientHandler* c = new MyTestClientHandler<string,string>(reverseSolver,cm);
+        Solver<String*,string>* reverseSolver = new StringReverser<String*,string>();
+        CacheManager<String*,string>* cm = new FileCacheManager<String*,string>();
+        ClientHandler* c = new MyTestClientHandler<String*,string>(reverseSolver,cm);
         serialServer->open(atoi(argv), c);
-        **/
+**/
         return 0;
     };
 };

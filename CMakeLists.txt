@@ -28,4 +28,4 @@ add_executable(MIlestone_2
         server/Server.h
         solver/Solver.h
         solver/StringReverser.cpp
-        main.cpp)
+        main.cpp client/String.h)
