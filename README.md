@@ -5,7 +5,7 @@ Advanced Programming 1, Computer Science Major at Bar-Ilan University
 
 This project provides a structure for solving problems and managing their solutions with a LRU cache manager. Particularly, the following problem sovlers were implemented:
 1. StringReverser - Reverse any string
-2. Searchers - graph searching algorithms (Best First Search, A*, BFS, DFS)
+2. Searcher - graph searching algorithms (Best First Search, A*, BFS, DFS)
 
 ## Key Features
 
