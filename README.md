@@ -3,7 +3,7 @@ Advanced Programming 1, Computer Science Major at Bar-Ilan University
 
 [Link to project's github repository](https://github.com/niliya96/MIlestone-2)
 
-This project provides a structure for solving problems and managing their solutions with an LRU cache manager. Particularly, the following problem sovlers were implemented:
+This project provides a structure for solving problems and managing their solutions with a LRU cache manager. Particularly, the following problem sovlers were implemented:
 1. StringReverse - reverse any string
 2. Graph Searching Algorithms: Best First Search, A*, BFS, DFS
 
