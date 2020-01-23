@@ -1,13 +1,18 @@
 # Milestone-2
-Advanced Programming 1
+Advanced Programming 1, Computer Science Mahor at Bar-Ilan University
 
 [Link to project's github repository](https://github.com/niliya96/MIlestone-2)
 
-This project is a code interpreter that allows us to remotely control a flight simulator
+This project provides a structure for solving problems and managing their solutions with an LRU cache manager. Particularly, the following problem sovlers were implemented:
+1. StringReverse - reverse any string
+2. Graph Searching Algorithms: Best First Search, A*, BFS, DFS
 
-## Getting Started
+## Key Features
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+* Server-client connection
+* Multi-Threading (and Mutex)
+* Usage of C++ STL, I/O
+* Usage of OOP Design Patterns: Bridge, Object Adapter...
 
 ### Prerequisites
 
@@ -20,106 +25,25 @@ Make sure to copy generic_small.xml to protocol folder, under the installation f
  
 ## Running the tests
 
-1. You can use the default code in "fly.txt" or edit it as you wish (see "How to edit "fly.txt" section)
-2. Compile the program with the following command (You could also use your favorite IDE):
+###Finding a path in KxN Graphs:
 ```
-g++ -std=c++14 */*.cpp *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -o a.out -pthread
+//This is a 3x4 graph
+1,6,2,3
+7,-1,1,6
+3,7,8,1
+2,6,7,5
+0,0
+3,3
+end
 ```
-3. Run it using the following command
-```
-./a.out "fly.txt"
-```
-4. Open "Flightgear" simulator, and hit "fly".
-5. Wait couple of minutes and see the plane in action!
+This means the program will find a path from (0,0) to (3,3) vertices in this spesific graph.
+``` -1 ``` means that this vertix isn't connected to any other vertix.
 
-### How to edit "fly.txt"
+The default searching algorithm (and our favorite) is Best First Search which returns the shortest path between two vertices. That said, switching to another searching algorithm can be easily changed in ```Server.h```
 
-Our interpreter supports the following commands:
+###Reverse a string
+First you need to switch the alternative code which is in ```Server.h```, then run the program, connect to localhost server, and type any string you'd like to reverse. The program can get multiple strings till the user hits ```end```.
 
-- Open Server Command:
-
-This command creates a local server for the simulator to connect to.
-```
-openDataServer(5400)
-```
-
-- Connect Command:
-
-This commands allows us to connect to the simulator as a client, and send it data.
-```
-connectControlClient("127.0.0.1",5402)
-```
-
-- Define Variable command:
-```
-var throttle -> sim("/controls/engines/current-engine/throttle")
-```
-"->" means that assignment in "fly.txt" will affect the simulator
-
-"<-" means that the simulator will affect local Variables
-
-Creating variables for local usage is also an option:
-```
-var h0 = heading
-```
-
-- Set Variable Command:
-```
-throttle = 1
-```
-
-- If command:
-```
-if alt >= 1000 {
- *DO WHATEVER'S IN HERE*
-}
-```
-
-- Loop Command:
-```
-while autostart == 1 {
- *DO WHATEVER'S IN HERE*
-}
-```
-
-- Print Command:
-```
-Print("Hello World") //Will print the string Hello World
-```
-or
-```
-Print(alt) //Will print the numerical value of the variable var
-```
-
-- Sleep Command:
-```
-Sleep(500) //Will make the program go to sleep for 500ms
-```
-
-- One last special feature:
-
-All parameters can be assigned as arthmetical expression (besides strings like "127.0.0.1
-"). For example:
-```
-Sleep((300 + 200) / 5)
-warp = (alt + 1800) * 2
-```
-
-### Break down into end to end tests
-
-We tested the program with different scenarios. For example:
-
-Empty loops
-```
-while rpm <= 750 {
-}
-```
-
-Variables that wasn't set as one of the 36 variables in small_generics.xml
-```
-var br -> sim("/controls/gear/brake-right")
-br = 1
-```
 
 ## Built With
 
@@ -133,4 +57,5 @@ br = 1
 
 ## Acknowledgments
 
-* We'd like to thank our families and friends for supporting us during the making of this project.
+* We'd like to thank our families and friends again(*) for supporting us during the making of this project.
+*(we already thanked them once after Milestone 1)
