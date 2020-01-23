@@ -64,7 +64,6 @@ public:
     void setDistanceFromGoalState(double newDistanceFromGoalState) {
         this->distanceFromGoalState = newDistanceFromGoalState;
     }
-/**
     bool operator==(const State &rhs) const {
         return currentState == rhs.currentState;
     }
@@ -72,7 +71,7 @@ public:
     bool operator!=(const State &rhs) const {
         return !(rhs == *this);
     }
-
+    /**
     bool operator>(const State &rhs) const {
         return this->pathCost > rhs.pathCost;
     }

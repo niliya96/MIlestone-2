@@ -17,10 +17,10 @@ public:
     virtual string toString() = 0;
     virtual Solution search(Searchable<T>* s) = 0;
     string backTrace(State<T>* state) {
-        if (state->getCameFrom() == nullptr) {
-            return "";
+        if (state->getCameFrom()->getCameFrom() == nullptr) {
+            return state->getDirection() + " (" + to_string((int)state->getPathCost()) + ")";
         }
-        return backTrace(state->getCameFrom()) + " " + state->getDirection();
+        return backTrace(state->getCameFrom()) + ", " + state->getDirection() + " (" + to_string((int)state->getPathCost()) + ")";
     }
     int getNumberOfNodesEvaluated() {
         return this->evaluatedNotes;
@@ -205,7 +205,6 @@ public:
     Solution search(Searchable<T>* s) {
         D->push_front(s->getIntialState());
         while(!D->empty()) {
-            cout << D->size() << " " << this->closed->size() << endl;
             State<MyPoint>* x = D->front();
             D->pop_front();
             this->closed->push_back(x);

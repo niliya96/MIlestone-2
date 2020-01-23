@@ -38,6 +38,10 @@ public:
         return this->N;
     }
     string toString();
+
+    bool operator==(const Matrix<T> *rhs) const;
+
+    bool operator!=(const Matrix<T> *rhs) const;
 };
 
 class MyPoint {
@@ -68,7 +72,7 @@ public:
     MyPoint getPoint() {
         return *this;
     }
-
+    /**
     bool operator==(const MyPoint &rhs) const {
         return i == rhs.i &&
                j == rhs.j;
@@ -77,5 +81,6 @@ public:
     bool operator!=(const MyPoint &rhs) const {
         return !(rhs == *this);
     }
+     **/
 };
 #endif //MILESTONE2_SEARCHABLE_H

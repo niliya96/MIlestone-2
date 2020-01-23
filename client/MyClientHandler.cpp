@@ -5,6 +5,7 @@ template class MyClientHandler <Matrix<MyPoint>*,string>;
 
 template<class Problem, class Solution>
 void MyClientHandler<Problem, Solution>::handleClient(int socket) {
+    this->l->clear();
     vector<string>* vec =  new vector<string>();
     int row =0;
     int col;

@@ -53,12 +53,12 @@ string Matrix<T>::toString() {
     int val;
     string name;
     for (State<MyPoint>* pointState : *(this->stateList)) {
-        val = pointState->getCurrentState()->getValue();
+        val = pointState->getCost();
         name = name + to_string(val) + ",";
     }
-    int valStart = this->s->getCurrentState()->getValue();
+    int valStart = this->getIntialState()->getCost();
     name = name + to_string(valStart) + ",";
-    int valTarget = this->t->getCurrentState()->getValue();
+    int valTarget = this->getGoalState()->getCost();
     name = name + to_string(valTarget);
     return name;
 }
