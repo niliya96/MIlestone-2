@@ -12,7 +12,7 @@ using namespace std;
 
 template <class T, class Solution> class Searcher {
 protected:
-    int evaluatedNotes = 0;
+    int evaluatedNotes = 1;
 public:
     virtual string toString() = 0;
     virtual Solution search(Searchable<T>* s) = 0;
@@ -207,6 +207,7 @@ public:
         while(!D->empty()) {
             State<MyPoint>* x = D->front();
             D->pop_front();
+            this->evaluatedNotes++;
             this->closed->push_back(x);
             if(x == s->getGoalState()) {
                 return this->backTrace(x);
@@ -236,6 +237,7 @@ public:
         while(!D->empty()) {
             State<MyPoint>* x = D->top();
             D->pop();
+            this->evaluatedNotes++;
             this->closed->push_front(x);
             if(x == s->getGoalState()) {
                 return this->backTrace(x);
