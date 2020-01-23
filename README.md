@@ -14,15 +14,6 @@ This project provides a structure for solving problems and managing their soluti
 * Usage of C++ STL, I/O
 * Usage of OOP Design Patterns: Bridge, Object Adapter...
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Flightgear - Download it from Ubuntu Software application. 
-```
-Make sure to copy generic_small.xml to protocol folder, under the installation folder.
- 
 ## Running the tests
 
 ###Finding a path in KxN Graphs:
