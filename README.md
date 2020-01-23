@@ -16,7 +16,7 @@ This project provides a structure for solving problems and managing their soluti
 
 ## Running the tests
 
-###Finding a path in KxN Graphs:
+### Finding a path in KxN Graphs:
 ```
 //This is a 3x4 graph
 1,6,2,3
@@ -32,7 +32,7 @@ This means the program will find a path from (0,0) to (3,3) vertices in this spe
 
 The default searching algorithm (and our favorite) is Best First Search which returns the shortest path between two vertices. That said, switching to another searching algorithm can be easily changed in ```Server.h```
 
-###Reverse a string
+### Reverse a string
 First you need to switch the alternative code which is in ```Server.h```, then run the program, connect to localhost server, and type any string you'd like to reverse. The program can get multiple strings till the user hits ```end```.
 
 
