@@ -19,8 +19,6 @@ add_executable(MIlestone_2
         searchable/Matrix.cpp
         searchable/Searchable.h
         searchable/State.h
-        searcher/AStar.cpp
-        searcher/BestFS.cpp
         searcher/Searcher.h
         server/MyParallelServer.cpp
         server/MySerialServer.cpp

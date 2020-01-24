@@ -24,7 +24,7 @@ int openServer(int port, ClientHandler* c) {
         return -2;
     }
     // listens to clients (1 can wait in the queue)
-    if (listen(socketFD, 1) == -1) {
+    if (listen(socketFD, 10) == -1) {
         std::cerr << "Error during listening command" << std::endl;
         return -3;
     } else {

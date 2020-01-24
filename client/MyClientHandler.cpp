@@ -6,7 +6,6 @@ template class MyClientHandler <Matrix<MyPoint>*,string>;
 template<class Problem, class Solution>
 void MyClientHandler<Problem, Solution>::handleClient(int socket) {
     // clear for the next runs
-    mu5.lock();
     this->l->clear();
     // vector to restor the buffer lines
     vector<string>* vec =  new vector<string>();
@@ -24,10 +23,12 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
     // read from buffer
     string line = "";
     char ch;
+    mu5.lock();
     while (buffer != "end") {
         // read char by char
         read(socket, &ch, 1);
         line.append(1,ch);
+
         if (line == "end") {
             break;
         }
@@ -36,12 +37,16 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
             vec->push_back(line);
             line = "";
         }
+
     }
     mu5.unlock();
     // build the matrix
     for (int i=0; i<vec->size()-2; i++) {
         // current line
         string current = vec->at(i);
+        if (current == "" || current == " " || current == "\n") {
+            continue;
+        }
         string accum = "";
         //col initialization (a new row)
         col=0;
