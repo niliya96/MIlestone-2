@@ -56,7 +56,7 @@ public:
         int port = 5600;
         // this is actually what the program runs
         // new server, shearchable, searcher and chache
-        server_side::Server* serialServer = new server_side::MyParallelServer();
+        server_side::Server* server = new server_side::MyParallelServer();
         Searcher<MyPoint,string>* alg = new BestFS<MyPoint,string>();
         SolverAdapter<MyPoint,Matrix<MyPoint>*,string>* solverAdapter =
                 new SolverAdapter<MyPoint,Matrix<MyPoint>*,string>(alg);
@@ -65,10 +65,10 @@ public:
         ClientHandler* c = new MyClientHandler<Matrix<MyPoint>*,string>(solverAdapter,cm);
         // calls to the server to accepts clients
         if (argv == nullptr) {
-            serialServer->open(port, c);
+            server->open(port, c);
         }
         else {
-            serialServer->open(atoi(argv), c);
+            server->open(atoi(argv), c);
         }
         /**
          *  TEST MY_TEST_CLIENT_HANDLER

@@ -24,12 +24,12 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
     string line = "";
     char ch;
     mu5.lock();
-    while (buffer != "end") {
+    while (line.find("end\n") != 0) {
         // read char by char
         read(socket, &ch, 1);
         line.append(1,ch);
 
-        if (line == "end") {
+        if (line.find("end\n") == 0) {
             break;
         }
         if (ch == '\n') {
@@ -37,7 +37,6 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
             vec->push_back(line);
             line = "";
         }
-
     }
     mu5.unlock();
     // build the matrix

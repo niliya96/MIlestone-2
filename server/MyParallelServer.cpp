@@ -44,7 +44,6 @@ int openServer(int port, ClientHandler* c) {
         if (result > 0) {
             socklen_t addrlen = sizeof(sockaddr_in);
             client_socket = accept(socketFD, (struct sockaddr *) &address, &addrlen);
-            std::cout << "Hi im client ..." << std::endl;
         }
         else {
             shouldStop = true;
