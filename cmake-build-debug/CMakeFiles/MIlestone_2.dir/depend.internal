@@ -33,13 +33,6 @@ CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.o
  /home/idan/CLionProjects/MIlestone-2/searchable/Matrix.cpp
  /home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
  /home/idan/CLionProjects/MIlestone-2/searchable/State.h
-CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o
- /home/idan/CLionProjects/MIlestone-2/searcher/AStar.cpp
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o
- /home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
- /home/idan/CLionProjects/MIlestone-2/searchable/State.h
- /home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp
- /home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h
 CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o
  /home/idan/CLionProjects/MIlestone-2/cacheManager/CacheManager.h
  /home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h

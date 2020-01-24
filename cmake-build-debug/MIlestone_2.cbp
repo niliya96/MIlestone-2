@@ -123,12 +123,6 @@
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searchable/State.h">
 			<Option target="MIlestone_2"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searcher/AStar.cpp">
-			<Option target="MIlestone_2"/>
-		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp">
-			<Option target="MIlestone_2"/>
-		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h">
 			<Option target="MIlestone_2"/>
 		</Unit>

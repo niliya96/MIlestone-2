@@ -53,6 +53,7 @@ public:
     Main() {};
     ~Main() {};
     int main(int argc, char* argv) {
+        int port = 5600;
         // this is actually what the program runs
         // new server, shearchable, searcher and chache
         server_side::Server* serialServer = new server_side::MyParallelServer();
@@ -63,7 +64,12 @@ public:
         // new client handler
         ClientHandler* c = new MyClientHandler<Matrix<MyPoint>*,string>(solverAdapter,cm);
         // calls to the server to accepts clients
-        serialServer->open(atoi(argv), c);
+        if (argv == nullptr) {
+            serialServer->open(port, c);
+        }
+        else {
+            serialServer->open(atoi(argv), c);
+        }
         /**
          *  TEST MY_TEST_CLIENT_HANDLER
         server_side::Server* serialServer = new server_side::MySerialServer();

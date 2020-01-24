@@ -96,35 +96,9 @@ CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/MIlestone-2/searchable/Matrix.cpp -o CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.s
 
-CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o: CMakeFiles/MIlestone_2.dir/flags.make
-CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o: ../searcher/AStar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o -c /home/idan/CLionProjects/MIlestone-2/searcher/AStar.cpp
-
-CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/MIlestone-2/searcher/AStar.cpp > CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.i
-
-CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/MIlestone-2/searcher/AStar.cpp -o CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.s
-
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o: CMakeFiles/MIlestone_2.dir/flags.make
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o: ../searcher/BestFS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o -c /home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp
-
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp > CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.i
-
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp -o CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.s
-
 CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o: CMakeFiles/MIlestone_2.dir/flags.make
 CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o: ../server/MyParallelServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o -c /home/idan/CLionProjects/MIlestone-2/server/MyParallelServer.cpp
 
 CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.i: cmake_force
@@ -137,7 +111,7 @@ CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.s: cmake_force
 
 CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.o: CMakeFiles/MIlestone_2.dir/flags.make
 CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.o: ../server/MySerialServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.o -c /home/idan/CLionProjects/MIlestone-2/server/MySerialServer.cpp
 
 CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.i: cmake_force
@@ -150,7 +124,7 @@ CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.s: cmake_force
 
 CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.o: CMakeFiles/MIlestone_2.dir/flags.make
 CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.o: ../solver/StringReverser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.o -c /home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp
 
 CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.i: cmake_force
@@ -163,7 +137,7 @@ CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.s: cmake_force
 
 CMakeFiles/MIlestone_2.dir/main.cpp.o: CMakeFiles/MIlestone_2.dir/flags.make
 CMakeFiles/MIlestone_2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MIlestone_2.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MIlestone_2.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIlestone_2.dir/main.cpp.o -c /home/idan/CLionProjects/MIlestone-2/main.cpp
 
 CMakeFiles/MIlestone_2.dir/main.cpp.i: cmake_force
@@ -179,8 +153,6 @@ MIlestone_2_OBJECTS = \
 "CMakeFiles/MIlestone_2.dir/client/MyClientHandler.cpp.o" \
 "CMakeFiles/MIlestone_2.dir/client/MyTestClientHandler.cpp.o" \
 "CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.o" \
-"CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o" \
-"CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o" \
 "CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o" \
 "CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.o" \
 "CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.o" \
@@ -192,15 +164,13 @@ MIlestone_2_EXTERNAL_OBJECTS =
 MIlestone_2: CMakeFiles/MIlestone_2.dir/client/MyClientHandler.cpp.o
 MIlestone_2: CMakeFiles/MIlestone_2.dir/client/MyTestClientHandler.cpp.o
 MIlestone_2: CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.o
-MIlestone_2: CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o
-MIlestone_2: CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o
 MIlestone_2: CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o
 MIlestone_2: CMakeFiles/MIlestone_2.dir/server/MySerialServer.cpp.o
 MIlestone_2: CMakeFiles/MIlestone_2.dir/solver/StringReverser.cpp.o
 MIlestone_2: CMakeFiles/MIlestone_2.dir/main.cpp.o
 MIlestone_2: CMakeFiles/MIlestone_2.dir/build.make
 MIlestone_2: CMakeFiles/MIlestone_2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable MIlestone_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/idan/CLionProjects/MIlestone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable MIlestone_2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MIlestone_2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

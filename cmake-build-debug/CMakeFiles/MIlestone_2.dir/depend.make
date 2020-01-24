@@ -33,13 +33,6 @@ CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.o: ../searchable/Matrix.cpp
 CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.o: ../searchable/Searchable.h
 CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.o: ../searchable/State.h
 
-CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o: ../searcher/AStar.cpp
-
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o: ../searchable/Searchable.h
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o: ../searchable/State.h
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o: ../searcher/BestFS.cpp
-CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o: ../searcher/Searcher.h
-
 CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o: ../cacheManager/CacheManager.h
 CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o: ../client/ClientHandler.h
 CMakeFiles/MIlestone_2.dir/server/MyParallelServer.cpp.o: ../client/String.h

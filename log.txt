@@ -1,3 +1,15 @@
+commit 7f6e735c2baa33ae50351cf79bd0c8b090715983
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Fri Jan 24 13:39:22 2020 +0200
+
+    We're done! (with log file)
+
+commit a063cdd0cdf48e9bd9c76ed857d4af92e92bf806
+Author: Idany95 <idanyarchi1@gmail.com>
+Date:   Fri Jan 24 13:38:37 2020 +0200
+
+    We're done!
+
 commit 1f1d468396283ec7db38d7ae4d9104daf2e71578
 Author: Idany95 <idanyarchi1@gmail.com>
 Date:   Fri Jan 24 11:41:21 2020 +0200

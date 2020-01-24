@@ -231,60 +231,6 @@ searchable/Matrix.cpp.s:
 	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/searchable/Matrix.cpp.s
 .PHONY : searchable/Matrix.cpp.s
 
-searcher/AStar.o: searcher/AStar.cpp.o
-
-.PHONY : searcher/AStar.o
-
-# target to build an object file
-searcher/AStar.cpp.o:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.o
-.PHONY : searcher/AStar.cpp.o
-
-searcher/AStar.i: searcher/AStar.cpp.i
-
-.PHONY : searcher/AStar.i
-
-# target to preprocess a source file
-searcher/AStar.cpp.i:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.i
-.PHONY : searcher/AStar.cpp.i
-
-searcher/AStar.s: searcher/AStar.cpp.s
-
-.PHONY : searcher/AStar.s
-
-# target to generate assembly for a file
-searcher/AStar.cpp.s:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/searcher/AStar.cpp.s
-.PHONY : searcher/AStar.cpp.s
-
-searcher/BestFS.o: searcher/BestFS.cpp.o
-
-.PHONY : searcher/BestFS.o
-
-# target to build an object file
-searcher/BestFS.cpp.o:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.o
-.PHONY : searcher/BestFS.cpp.o
-
-searcher/BestFS.i: searcher/BestFS.cpp.i
-
-.PHONY : searcher/BestFS.i
-
-# target to preprocess a source file
-searcher/BestFS.cpp.i:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.i
-.PHONY : searcher/BestFS.cpp.i
-
-searcher/BestFS.s: searcher/BestFS.cpp.s
-
-.PHONY : searcher/BestFS.s
-
-# target to generate assembly for a file
-searcher/BestFS.cpp.s:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/searcher/BestFS.cpp.s
-.PHONY : searcher/BestFS.cpp.s
-
 server/MyParallelServer.o: server/MyParallelServer.cpp.o
 
 .PHONY : server/MyParallelServer.o
@@ -387,12 +333,6 @@ help:
 	@echo "... searchable/Matrix.o"
 	@echo "... searchable/Matrix.i"
 	@echo "... searchable/Matrix.s"
-	@echo "... searcher/AStar.o"
-	@echo "... searcher/AStar.i"
-	@echo "... searcher/AStar.s"
-	@echo "... searcher/BestFS.o"
-	@echo "... searcher/BestFS.i"
-	@echo "... searcher/BestFS.s"
 	@echo "... server/MyParallelServer.o"
 	@echo "... server/MyParallelServer.i"
 	@echo "... server/MyParallelServer.s"
