@@ -11,6 +11,7 @@ template <class T> class State{
 private:
     string stateName;
     double cost;
+    // initialize path cost for a state of a point
     double pathCost = 0;
     double distanceFromGoalState;
     T* currentState;
@@ -71,20 +72,13 @@ public:
     bool operator!=(const State &rhs) const {
         return !(rhs == *this);
     }
-    /**
-    bool operator>(const State &rhs) const {
-        return this->pathCost > rhs.pathCost;
-    }
-
-    bool operator<(const State &rhs) const {
-        return this->pathCost < rhs.pathCost;
-    }**/
 };
 
 template <class T>
 struct myComparator
 {
 public:
+    // comparator for BestFs
     int operator() (State<T>* s1, State<T>* s2)
     {
         return s1->getPathCost() > s2->getPathCost();
@@ -96,8 +90,10 @@ template <class T>
 struct AStarComparator
 {
 public:
+    // comparator for AStar
     int operator() (State<T>* s1, State<T>* s2)
     {
+        // path cost + distance
         return s1->getPathCost() + s1->getDistanceFromGoalState() >
         s2->getPathCost() + s2->getDistanceFromGoalState();
     }

@@ -5,13 +5,19 @@ template class MyClientHandler <Matrix<MyPoint>*,string>;
 
 template<class Problem, class Solution>
 void MyClientHandler<Problem, Solution>::handleClient(int socket) {
+    // clear for the next runs
+    mu5.lock();
     this->l->clear();
+    // vector to restor the buffer lines
     vector<string>* vec =  new vector<string>();
+    // initializations
     int row =0;
     int col;
     int sizeOfMatrix;
+    // start and target points
     MyPoint* s;
     MyPoint* t;
+    // states for them
     State<MyPoint>* startState;
     State<MyPoint>* targetState;
     char buffer[1024] = {0};
@@ -19,20 +25,25 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
     string line = "";
     char ch;
     while (buffer != "end") {
+        // read char by char
         read(socket, &ch, 1);
         line.append(1,ch);
         if (line == "end") {
             break;
         }
         if (ch == '\n') {
+            // end of line
             vec->push_back(line);
             line = "";
         }
     }
+    mu5.unlock();
     // build the matrix
     for (int i=0; i<vec->size()-2; i++) {
+        // current line
         string current = vec->at(i);
         string accum = "";
+        //col initialization (a new row)
         col=0;
         int val;
         for (int k=0; k<current.length(); k++) {
@@ -72,6 +83,7 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
                 continue;
             }
             else {
+                // accumulates the value
                 accum = accum + current[k];
             }
         }
@@ -84,11 +96,13 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
     for (int w=0; w<startString.size(); w++) {
         if (startString[w] == '\n') {
             try {
+                // col
                 j = stoi(acc);
             }
             catch (...) {
                 throw "bad input";
             }
+            // search in the list of points
             for (State<MyPoint>* pointState : *(this->l)) {
                 if (pointState->getCurrentState()->getX() == i && pointState->getCurrentState()->getY() == j) {
                     value = pointState->getCurrentState()->getValue();
@@ -100,6 +114,7 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
         }
         else if (startString[w] == ',') {
             try {
+                // row
                 i = stoi(acc);
             }
             catch (...) {
@@ -118,11 +133,13 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
     for (int w=0; w<targetString.size(); w++) {
         if (targetString[w] == '\n') {
             try {
+                // col
                 j = stoi(acc);
             }
             catch (...) {
                 throw "bad input";
             }
+            // search in the list of points
             for (State<MyPoint>* pointState : *(this->l)) {
                 if (pointState->getCurrentState()->getX() == i && pointState->getCurrentState()->getY() == j) {
                     value = pointState->getCurrentState()->getValue();
@@ -134,6 +151,7 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
         }
         else if (targetString[w] == ',') {
             try {
+                // row
                 i = stoi(acc);
             }
             catch (...) {
@@ -146,12 +164,6 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
         }
     }
     Searchable<MyPoint>* matrix = new Matrix<MyPoint>(this->l, startState, targetState, sizeOfMatrix);
-    //cout << this->solver->solve(dynamic_cast<Matrix<MyPoint> *>(matrix)) << flush << endl;
-    //cout << targetState->getPathCost() << flush << endl;
-
-    //string problemString = matrix->toString() +
-    //((SolverAdapter<MyPoint,Problem,Solution>*)this->solver)->getSearcher()->toString();
-
     string message;
     //search solution in cache
     bool solutionExist = this->cm->isExist((Matrix<MyPoint>*)matrix);
@@ -166,7 +178,8 @@ void MyClientHandler<Problem, Solution>::handleClient(int socket) {
     //send solution to client
     message = message + "\n";
     char* messageSend = const_cast<char *>(message.c_str());
+    mu4.lock();
     int toSend = send(socket , messageSend , strlen(messageSend), 0);
-
+    mu4.unlock();
 }
 

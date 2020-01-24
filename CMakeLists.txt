@@ -13,7 +13,6 @@ include_directories(solver)
 
 add_executable(MIlestone_2
         cacheManager/CacheManager.h
-        cacheManager/FileCacheManager.cpp
         client/ClientHandler.h
         client/MyClientHandler.cpp
         client/MyTestClientHandler.cpp

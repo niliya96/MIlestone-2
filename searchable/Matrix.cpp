@@ -5,8 +5,6 @@ template class Matrix<MyPoint>;
 
 template<class T>
 list<State<MyPoint>*>* Matrix<T>::getAllPossibleStates(State<MyPoint>*s, list<State<MyPoint>*>* closed) {
-    /**TODO Currently this method is only suitable for Up,Down,Right,Left.
-     * we need to Figure out how to make it work with 8 directions (AStar)*/
     list<State<MyPoint>*>* options = new list<State<MyPoint>*>();
     //add possible moves Up, Down, Right, Left as long as they're in the Matrix
     for(State<MyPoint>* state : *this->stateList) {

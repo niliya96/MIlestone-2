@@ -123,33 +123,6 @@ MIlestone_2/fast:
 	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/build
 .PHONY : MIlestone_2/fast
 
-cacheManager/FileCacheManager.o: cacheManager/FileCacheManager.cpp.o
-
-.PHONY : cacheManager/FileCacheManager.o
-
-# target to build an object file
-cacheManager/FileCacheManager.cpp.o:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/cacheManager/FileCacheManager.cpp.o
-.PHONY : cacheManager/FileCacheManager.cpp.o
-
-cacheManager/FileCacheManager.i: cacheManager/FileCacheManager.cpp.i
-
-.PHONY : cacheManager/FileCacheManager.i
-
-# target to preprocess a source file
-cacheManager/FileCacheManager.cpp.i:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/cacheManager/FileCacheManager.cpp.i
-.PHONY : cacheManager/FileCacheManager.cpp.i
-
-cacheManager/FileCacheManager.s: cacheManager/FileCacheManager.cpp.s
-
-.PHONY : cacheManager/FileCacheManager.s
-
-# target to generate assembly for a file
-cacheManager/FileCacheManager.cpp.s:
-	$(MAKE) -f CMakeFiles/MIlestone_2.dir/build.make CMakeFiles/MIlestone_2.dir/cacheManager/FileCacheManager.cpp.s
-.PHONY : cacheManager/FileCacheManager.cpp.s
-
 client/MyClientHandler.o: client/MyClientHandler.cpp.o
 
 .PHONY : client/MyClientHandler.o
@@ -402,9 +375,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MIlestone_2"
 	@echo "... edit_cache"
-	@echo "... cacheManager/FileCacheManager.o"
-	@echo "... cacheManager/FileCacheManager.i"
-	@echo "... cacheManager/FileCacheManager.s"
 	@echo "... client/MyClientHandler.o"
 	@echo "... client/MyClientHandler.i"
 	@echo "... client/MyClientHandler.s"

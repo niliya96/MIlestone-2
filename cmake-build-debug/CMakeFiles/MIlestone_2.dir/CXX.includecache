@@ -17,6 +17,8 @@ fstream
 -
 sstream
 -
+mutex
+-
 
 /home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
 ../solver/Solver.h
@@ -44,6 +46,14 @@ sstream
 list
 -
 
+/home/idan/CLionProjects/MIlestone-2/client/MyClientHandler.cpp
+ClientHandler.h
+/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
+
+/home/idan/CLionProjects/MIlestone-2/client/MyTestClientHandler.cpp
+ClientHandler.h
+/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h
+
 /home/idan/CLionProjects/MIlestone-2/client/String.h
 string
 -
@@ -51,6 +61,14 @@ string
 /home/idan/CLionProjects/MIlestone-2/main.cpp
 server/Server.h
 /home/idan/CLionProjects/MIlestone-2/server/Server.h
+
+/home/idan/CLionProjects/MIlestone-2/searchable/Matrix.cpp
+Searchable.h
+/home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
+algorithm
+-
+math.h
+-
 
 /home/idan/CLionProjects/MIlestone-2/searchable/Searchable.h
 list
@@ -66,6 +84,16 @@ stdio.h
 string
 -
 string.h
+-
+
+/home/idan/CLionProjects/MIlestone-2/searcher/AStar.cpp
+
+/home/idan/CLionProjects/MIlestone-2/searcher/BestFS.cpp
+Searcher.h
+/home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h
+stdlib.h
+-
+string
 -
 
 /home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h
@@ -123,10 +151,18 @@ cstring
 -
 iostream
 -
+mutex
+-
 
 /home/idan/CLionProjects/MIlestone-2/solver/Solver.h
 ../searcher/Searcher.h
 /home/idan/CLionProjects/MIlestone-2/searcher/Searcher.h
 string
 -
+
+/home/idan/CLionProjects/MIlestone-2/solver/StringReverser.cpp
+Solver.h
+/home/idan/CLionProjects/MIlestone-2/solver/Solver.h
+../client/String.h
+/home/idan/CLionProjects/MIlestone-2/client/String.h
 

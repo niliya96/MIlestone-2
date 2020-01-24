@@ -53,14 +53,17 @@ int openServer(int port, ClientHandler* c) {
         if (client_socket == -1) {
             return -4;
         }
-        thread ClientParallel(handle,c, client_socket);
+        // parallel server part
+        thread ClientParallel(handle,c->clone(), client_socket);
         ClientParallel.detach();
     }
+    // close the socket of server
     close(socketFD);
     return 0;
 
 }
 void MyParallelServer::open(int port, ClientHandler* c) {
+    // call to parallel sever thread
     thread parallelserver(openServer, port, c);
     parallelserver.join();
 }

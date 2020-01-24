@@ -14,6 +14,7 @@ template <class T, class Solution> class Searcher {
 protected:
     int evaluatedNotes = 1;
 public:
+    virtual Searcher* clone() = 0;
     virtual string toString() = 0;
     virtual Solution search(Searchable<T>* s) = 0;
     string backTrace(State<T>* state) {
@@ -33,6 +34,7 @@ private:
             new priority_queue<State<T>*, vector<State<T>*>, myComparator<T>>();
     list<State<T>*>* closed = new list<State<T>*>();
 public:
+    Searcher<T,Solution>* clone() {return new BestFS();};
     string toString() {
         return "BestFirstSearch";
     }
@@ -115,6 +117,7 @@ private:
             new priority_queue<State<T>*, vector<State<T>*>, struct AStarComparator<T>>();
     list<State<T>*>* closed = new list<State<T>*>();
 public:
+    Searcher<T,Solution>* clone() {return new AStar();};
     string toString() {
         return "AStar";
     }
@@ -199,6 +202,7 @@ private:
     list<State<T>*>* D = new list<State<T>*>;
     list<State<T>*>* closed = new list<State<T>*>();
 public:
+    Searcher<T,Solution>* clone() {return new BFS();};
     string toString() {
         return "BFS";
     }
@@ -229,6 +233,7 @@ private:
     stack<State<T>*>* D = new stack<State<T>*>;
     list<State<T>*>* closed = new list<State<T>*>();
 public:
+    Searcher<T,Solution>* clone() {return new DFS();};
     string toString() {
         return "DFS";
     }

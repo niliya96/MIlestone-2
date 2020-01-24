@@ -31,6 +31,7 @@ int openServerSerial(int port, ClientHandler* c) {
     int result;
     // accepts clients
     while (!shouldStop) {
+        // timing, if there is no conection in 120 seconds the socket will close
         fd_set rfds;
         FD_ZERO(&rfds);
         FD_SET(socketFD, &rfds);
@@ -39,11 +40,12 @@ int openServerSerial(int port, ClientHandler* c) {
         tv.tv_usec = 0;
         result = select(socketFD+1, &rfds, (fd_set*)0, (fd_set*)0, &tv);
         if (result > 0) {
+            // accept
             socklen_t addrlen = sizeof(sockaddr_in);
             client_socket = accept(socketFD, (struct sockaddr *) &address, &addrlen);
-            std::cout << "Hi im client ..." << std::endl;
         }
         else {
+            // if there is no conections
             shouldStop = true;
             continue;
         }
@@ -58,6 +60,7 @@ int openServerSerial(int port, ClientHandler* c) {
 
 }
 void MySerialServer::open(int port, ClientHandler* c) {
+    // thread for serial server
     thread server(openServerSerial, port, c);
     server.join();
 }

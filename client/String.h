@@ -10,6 +10,7 @@ class String {
 private:
     string s;
 public:
+    // string object for strings, so we can operate to_string on them
     String(string newS) {
         this->s = newS;
     }

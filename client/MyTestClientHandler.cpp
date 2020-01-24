@@ -1,9 +1,10 @@
 #include "ClientHandler.h"
 using namespace std;
+
+// this is just a test for a client
 template<> void MyTestClientHandler<String*, string>::handleClient(int socket) {
     while(true) {
         char buffer[1024] = {0};
-        /**TODO flush*/
         int valread = read(socket, buffer, 1024);
         stringstream bufferedValues(buffer);
         if (bufferedValues.str().compare("end\r\n") == 0) {

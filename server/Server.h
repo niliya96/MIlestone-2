@@ -12,6 +12,7 @@
 #include <arpa/inet.h>
 #include <cstring>
 #include <iostream>
+#include <mutex>
 using namespace std;
 namespace server_side {
     class Server {
@@ -26,7 +27,8 @@ namespace server_side {
     public:
         MySerialServer() = default;
         ~MySerialServer() = default;
-    private:
+
+    public:
         void open(int port, ClientHandler* c);
         void stop();
     };
@@ -35,7 +37,8 @@ namespace server_side {
     public:
         MyParallelServer() = default;
         ~MyParallelServer() = default;
-    private:
+
+    public:
         void open(int port, ClientHandler* c);
         void stop();
     };
@@ -50,23 +53,25 @@ public:
     Main() {};
     ~Main() {};
     int main(int argc, char* argv) {
-
-        server_side::Server* serialServer = new server_side::MySerialServer();
+        // this is actually what the program runs
+        // new server, shearchable, searcher and chache
+        server_side::Server* serialServer = new server_side::MyParallelServer();
         Searcher<MyPoint,string>* alg = new BestFS<MyPoint,string>();
         SolverAdapter<MyPoint,Matrix<MyPoint>*,string>* solverAdapter =
                 new SolverAdapter<MyPoint,Matrix<MyPoint>*,string>(alg);
         CacheManager<Matrix<MyPoint>*,string>* cm = new FileCacheManager<Matrix<MyPoint>*,string>();
+        // new client handler
         ClientHandler* c = new MyClientHandler<Matrix<MyPoint>*,string>(solverAdapter,cm);
+        // calls to the server to accepts clients
         serialServer->open(atoi(argv), c);
-
-/**
-        //* TEST MY_TEST_CLIENT_HANDLER
+        /**
+         *  TEST MY_TEST_CLIENT_HANDLER
         server_side::Server* serialServer = new server_side::MySerialServer();
         Solver<String*,string>* reverseSolver = new StringReverser<String*,string>();
         CacheManager<String*,string>* cm = new FileCacheManager<String*,string>();
         ClientHandler* c = new MyTestClientHandler<String*,string>(reverseSolver,cm);
         serialServer->open(atoi(argv), c);
-**/
+        **/
         return 0;
     };
 };

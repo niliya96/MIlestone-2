@@ -99,9 +99,6 @@
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/cacheManager/CacheManager.h">
 			<Option target="MIlestone_2"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/MIlestone-2/cacheManager/FileCacheManager.cpp">
-			<Option target="MIlestone_2"/>
-		</Unit>
 		<Unit filename="/home/idan/CLionProjects/MIlestone-2/client/ClientHandler.h">
 			<Option target="MIlestone_2"/>
 		</Unit>

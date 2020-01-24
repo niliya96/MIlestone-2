@@ -6,7 +6,7 @@ using namespace std;
 #include <list>
 #include <fstream>
 #include <sstream>
-
+#include <mutex>
 template <class Problem, class Solution> class CacheManager {
 public:
     virtual bool isExist(Problem p) = 0;
@@ -15,25 +15,32 @@ public:
 };
 template <class Problem, class Solution> class FileCacheManager : public CacheManager<Problem, Solution> {
 private:
+    mutex mu1;
+    mutex mu2;
+    mutex mu3;
     int size = 5;
     map<string, typename list<std::pair<string,Solution>>::iterator>* cache =
             new map<string, typename list<std::pair<string,Solution>>::iterator>;
     list<std::pair<string,Solution>>* orderedList = new list<std::pair<string,Solution>>();
 public:
     bool isExist(Problem p) {
+        mu1.lock();
         string hashedProblem = hashProblem(p);
         //search in cache
         if(this->cache->find(hashedProblem) != this->cache->end()) {
+            mu1.unlock();
             return true;
         }
             //if it's not in cache, search in disk
         else {
             //if problem is a custom object
             ifstream f(hashedProblem);
+            mu1.unlock();
             return f.good();
         }
     };
     Solution get(Problem p) {
+        mu2.lock();
         if(isExist(p)) {
             string hashedProblem = hashProblem(p);
             //the item is not in the cache map
@@ -60,6 +67,7 @@ public:
                     orderedList->push_front(std::make_pair(hashedProblem, solution));
                     (*cache)[hashedProblem] = orderedList->begin();
                 }
+                mu2.unlock();
                 return solution;
             }
                 //it is in cache
@@ -68,15 +76,18 @@ public:
                 orderedList->push_front(*(*cache)[hashedProblem]);
                 orderedList->erase((*cache)[hashedProblem]);
                 (*cache)[hashedProblem] = orderedList->begin();
+                mu2.unlock();
                 return orderedList->front().second;
             }
         }
             //its not in cache or disk
         else {
+            mu2.unlock();
             return nullptr;
         }
     };
     void insert(Problem p, Solution s) {
+        mu3.lock();
         string hashedProblem = hashProblem(p);
         //the item is not in the cache
         if(cache->find(hashedProblem) == cache->end()) {
@@ -110,6 +121,7 @@ public:
         }
         //write it in disk
         writeFile(p,s);
+        mu3.unlock();
     };
     string readFile(Problem problem) {
         string solution;
